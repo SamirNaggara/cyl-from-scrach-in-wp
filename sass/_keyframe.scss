@@ -1,0 +1,27 @@
+/* Cette animation fait apparaitre puis disparaitre les mots au debuts */
+@keyframes motQuiApparait {
+    0%   {opacity: 0;}
+    100%  {opacity: 1;}
+   
+}
+
+/* Cette animation fait disparaitre la div firsLoad, faisant apparaitre le reste de la page  */
+@keyframes faireDisparaitreFirstLoad {
+    0%   {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+// Animation pour le bloc 1
+
+// N'existe que si la personne n'a pas expressemment demandé à avoir moins d'animation
+
+@keyframes apparait{
+    0%  {opacity: 0; transform: translateY(-100px);}
+    100% {opacity:1; transform: translateY(0);}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .appear-animation {
+      animation: wipe-enter 1s 1;
+    }
+  }

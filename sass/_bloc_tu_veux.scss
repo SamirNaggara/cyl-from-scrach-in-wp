@@ -1,0 +1,64 @@
+@use 'base';
+
+
+
+.bloc-tu-veux{
+    display: flex;
+    .conteneur{
+        width: 50%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: base.$police-principal;
+        font-size: 30px;
+
+        position: relative;
+
+        @import url(https://fonts.googleapis.com/css?family=Khula:700);
+            
+            .hidden {
+            opacity:0;
+            }
+            .console-container {
+            
+            font-family:Khula;
+            font-size:2em;
+            height:200px;
+            width:80%;
+            max-width: 960px;
+            display:block;
+            position:absolute;
+            color:white;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+            margin:auto;
+            }
+            .console-underscore {
+            display:inline-block;
+            position:relative;
+            top:-0.14em;
+            left:10px;
+            }
+    }
+
+    .conteneur-cta{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    
+
+        p{
+            font-size: 30px;
+            padding: 32px;
+        }
+
+        .texte{
+            margin-top: 40px;
+        }
+    }
+}

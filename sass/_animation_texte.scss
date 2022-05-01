@@ -1,0 +1,47 @@
+#first-load{
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    background-color: white;
+    
+    animation: faireDisparaitreFirstLoad;
+    animation-duration: 0.5s;
+    animation-delay: 4s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+
+    z-index: 20;
+
+   
+}
+
+
+#first-load>span{
+    font-size: 20px;
+
+
+    opacity: 0;
+
+    animation: motQuiApparait;
+    animation-duration: 1.0s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+/*Pour que les mots n'apparaissent pas en même temps*/
+#first-load>span:first-child{
+    animation-delay: 0.5s;
+}
+
+#first-load>span:nth-child(2){
+    animation-delay: 1.5s;
+}
+
+#first-load>span:nth-child(3){
+    animation-delay: 2.5s;
+}

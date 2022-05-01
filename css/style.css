@@ -1,0 +1,744 @@
+@charset "UTF-8";
+@font-face {
+  font-family: helvetica;
+  src: url("../polices/_H_HelveticaNeueInterface.ttf");
+}
+html {
+  scroll-snap-type: y mandatory;
+  transition: 3s;
+  font-family: "Poppins";
+}
+
+body section {
+  scroll-snap-align: start;
+  height: 100vh;
+}
+
+/* Pour ceux a qui on a envie de mettre un fond degradé */
+.degrade {
+  background-image: radial-gradient(circle at 56.16% 120.44%, #f446ff 0, #d635fb 25%, #b31ef3 50%, #8c02eb 75%, #6100e5 100%);
+}
+
+/* Cette animation fait apparaitre puis disparaitre les mots au debuts */
+@keyframes motQuiApparait {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Cette animation fait disparaitre la div firsLoad, faisant apparaitre le reste de la page  */
+@keyframes faireDisparaitreFirstLoad {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes apparait {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .appear-animation {
+    animation: wipe-enter 1s 1;
+  }
+}
+.conteneurMenu {
+  position: fixed;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.conteneurMenu > div {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1600px;
+  display: flex;
+}
+.conteneurMenu .conteneurLogo {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+.conteneurMenu .conteneurLogo p {
+  font-family: "Poppins";
+  font-size: 23px;
+  margin-left: 100px;
+}
+.conteneurMenu nav {
+  width: 50%;
+  height: 92px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.conteneurMenu nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  margin: 0 16px;
+}
+
+#first-load {
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: white;
+  animation: faireDisparaitreFirstLoad;
+  animation-duration: 0.5s;
+  animation-delay: 4s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  z-index: 20;
+}
+
+#first-load > span {
+  font-size: 20px;
+  opacity: 0;
+  animation: motQuiApparait;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+/*Pour que les mots n'apparaissent pas en même temps*/
+#first-load > span:first-child {
+  animation-delay: 0.5s;
+}
+
+#first-load > span:nth-child(2) {
+  animation-delay: 1.5s;
+}
+
+#first-load > span:nth-child(3) {
+  animation-delay: 2.5s;
+}
+
+.hero .conteneurHero {
+  height: 100vh;
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+.hero .conteneurHero .logo {
+  width: 30%;
+  background-image: url(../images/mascotte-v1.png);
+  background-repeat: no-repeat;
+  background-size: 305px;
+  background-position: 10% 50%;
+}
+.hero .conteneurHero .conteneur {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 80px;
+}
+.hero .conteneurHero .conteneur .conteneur-logo {
+  width: 20%;
+}
+.hero .conteneurHero .conteneur .conteneur-titre {
+  width: 80%;
+}
+.hero .conteneurHero .conteneur > * {
+  animation: apparait;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  animation-delay: 4.5s;
+}
+.hero .conteneurHero .conteneur p.dans-le {
+  font-size: 40px;
+  margin: 24px;
+}
+.hero .conteneurHero .conteneur h1 {
+  font-size: 50px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.hero .conteneurHero .conteneur p.description {
+  opacity: 0;
+  font-size: 25px;
+  margin-bottom: 50px;
+  margin-top: 56px;
+  color: white;
+  line-height: 42px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.hero .conteneurHero .conteneur a.cta {
+  text-decoration: none;
+  color: white;
+  background-color: purple;
+  padding: 16px 40px;
+  text-transform: uppercase;
+}
+
+.bloc-tu-veux {
+  display: flex;
+}
+.bloc-tu-veux .conteneur {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins";
+  font-size: 30px;
+  position: relative;
+  @import url(https://fonts.googleapis.com/css?family=Khula:700);
+}
+.bloc-tu-veux .conteneur .hidden {
+  opacity: 0;
+}
+.bloc-tu-veux .conteneur .console-container {
+  font-family: Khula;
+  font-size: 2em;
+  height: 200px;
+  width: 80%;
+  max-width: 960px;
+  display: block;
+  position: absolute;
+  color: white;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.bloc-tu-veux .conteneur .console-underscore {
+  display: inline-block;
+  position: relative;
+  top: -0.14em;
+  left: 10px;
+}
+.bloc-tu-veux .conteneur-cta {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.bloc-tu-veux .conteneur-cta p {
+  font-size: 30px;
+  padding: 32px;
+}
+.bloc-tu-veux .conteneur-cta .texte {
+  margin-top: 40px;
+}
+
+.blocPourquoiCyl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.blocPourquoiCyl .conteneurBloc {
+  width: 80%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.blocPourquoiCyl .conteneurBloc h2 {
+  text-align: center;
+  margin: 32px 0;
+  font-weight: bold;
+}
+.blocPourquoiCyl .conteneurBloc .conteneurCards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.blocPourquoiCyl .conteneurBloc .conteneurCards > .card {
+  width: 25%;
+  height: 200px;
+  border: 5px solid black;
+}
+.blocPourquoiCyl .conteneurBloc .conteneurCards > .card h3 {
+  text-align: center;
+  font-size: 20px;
+  margin: 16px;
+}
+section.bloc-cta-html {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat";
+  font-size: 30px;
+  position: relative;
+}
+section.bloc-cta-html .conteneurBloc {
+  width: 80%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+section.bloc-cta-html .conteneurBloc h2 {
+  text-align: center;
+  margin: 32px 0;
+  font-weight: bold;
+}
+section.bloc-cta-html .conteneurBloc p {
+  line-height: 45px;
+}
+section.bloc-cta-html .conteneurBloc strong {
+  font-weight: bold;
+}
+section.bloc-cta-html .conteneurBloc .conteneur-boutons {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+section.bloc-cta-html .conteneurBloc .conteneur-boutons a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  background-color: purple;
+  padding: 16px 40px;
+  margin: 0 16px;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.conteneur-pas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  pointer-events: none;
+}
+
+.ajax-loader, .ajax-loader2, .ajax-loader3, .ajax-loader4 {
+  position: absolute;
+  transform-origin: 50% 50%;
+  font-size: 80px;
+  width: 1em;
+  height: 3em;
+  color: #d31145;
+}
+.ajax-loader .paw, .ajax-loader2 .paw, .ajax-loader3 .paw, .ajax-loader4 .paw {
+  width: 1.5em;
+  height: 1em;
+  animation: 20100ms pawAnimation ease-in-out infinite;
+  opacity: 0;
+}
+.ajax-loader .paw svg, .ajax-loader2 .paw svg, .ajax-loader3 .paw svg, .ajax-loader4 .paw svg {
+  width: 100%;
+  height: 100%;
+}
+.ajax-loader .paw .icon, .ajax-loader2 .paw .icon, .ajax-loader3 .paw .icon, .ajax-loader4 .paw .icon {
+  fill: #d31145;
+}
+.ajax-loader .paw:nth-child(odd), .ajax-loader2 .paw:nth-child(odd), .ajax-loader3 .paw:nth-child(odd), .ajax-loader4 .paw:nth-child(odd) {
+  transform: rotate(0deg);
+}
+.ajax-loader .paw:nth-child(even), .ajax-loader2 .paw:nth-child(even), .ajax-loader3 .paw:nth-child(even), .ajax-loader4 .paw:nth-child(even) {
+  transform: rotate(0deg) scaleX(-1) translate(15%, -50%);
+}
+.ajax-loader .paw:nth-child(1), .ajax-loader2 .paw:nth-child(1), .ajax-loader3 .paw:nth-child(1), .ajax-loader4 .paw:nth-child(1) {
+  animation-delay: 9.5s;
+  transform: rotate(0deg) translate3d(-4%, -48%, 0);
+}
+.ajax-loader .paw:nth-child(1), .ajax-loader2 .paw:nth-child(1), .ajax-loader3 .paw:nth-child(1), .ajax-loader4 .paw:nth-child(1) {
+  animation-delay: 9.5s;
+  transform: rotate(-8deg) translate3d(30%, -50%, 0);
+}
+.ajax-loader .paw:nth-child(2), .ajax-loader2 .paw:nth-child(2), .ajax-loader3 .paw:nth-child(2), .ajax-loader4 .paw:nth-child(2) {
+  animation-delay: 9s;
+  transform: rotate(0deg) scaleX(-1) translate3d(10%, -100%, 0);
+}
+.ajax-loader .paw:nth-child(2), .ajax-loader2 .paw:nth-child(2), .ajax-loader3 .paw:nth-child(2), .ajax-loader4 .paw:nth-child(2) {
+  animation-delay: 9s;
+  transform: rotate(-8deg) scaleX(-1) translate3d(-30%, -120%, 0);
+}
+.ajax-loader .paw:nth-child(3), .ajax-loader2 .paw:nth-child(3), .ajax-loader3 .paw:nth-child(3), .ajax-loader4 .paw:nth-child(3) {
+  animation-delay: 8.5s;
+  transform: rotate(0deg) translate3d(-12%, -144%, 0);
+}
+.ajax-loader .paw:nth-child(3), .ajax-loader2 .paw:nth-child(3), .ajax-loader3 .paw:nth-child(3), .ajax-loader4 .paw:nth-child(3) {
+  animation-delay: 8.5s;
+  transform: rotate(0deg) translate3d(45%, -144%, 0);
+}
+.ajax-loader .paw:nth-child(4), .ajax-loader2 .paw:nth-child(4), .ajax-loader3 .paw:nth-child(4), .ajax-loader4 .paw:nth-child(4) {
+  animation-delay: 8s;
+  transform: rotate(0deg) scaleX(-1) translate3d(20%, -200%, 0);
+}
+.ajax-loader .paw:nth-child(4), .ajax-loader2 .paw:nth-child(4), .ajax-loader3 .paw:nth-child(4), .ajax-loader4 .paw:nth-child(4) {
+  animation-delay: 8s;
+  transform: rotate(0deg) scaleX(-1) translate3d(-32%, -200%, 0);
+}
+.ajax-loader .paw:nth-child(5), .ajax-loader2 .paw:nth-child(5), .ajax-loader3 .paw:nth-child(5), .ajax-loader4 .paw:nth-child(5) {
+  animation-delay: 7.5s;
+  transform: rotate(0deg) translate3d(-20%, -240%, 0);
+}
+.ajax-loader .paw:nth-child(5), .ajax-loader2 .paw:nth-child(5), .ajax-loader3 .paw:nth-child(5), .ajax-loader4 .paw:nth-child(5) {
+  animation-delay: 7.5s;
+  transform: rotate(0deg) translate3d(40%, -240%, 0);
+}
+.ajax-loader .paw:nth-child(6), .ajax-loader2 .paw:nth-child(6), .ajax-loader3 .paw:nth-child(6), .ajax-loader4 .paw:nth-child(6) {
+  animation-delay: 7s;
+  transform: rotate(0deg) scaleX(-1) translate3d(30%, -300%, 0);
+}
+.ajax-loader .paw:nth-child(6), .ajax-loader2 .paw:nth-child(6), .ajax-loader3 .paw:nth-child(6), .ajax-loader4 .paw:nth-child(6) {
+  animation-delay: 7s;
+  transform: rotate(0deg) scaleX(-1) translate3d(-30%, -300%, 0);
+}
+.ajax-loader .paw:nth-child(7), .ajax-loader2 .paw:nth-child(7), .ajax-loader3 .paw:nth-child(7), .ajax-loader4 .paw:nth-child(7) {
+  animation-delay: 6.5s;
+  transform: rotate(0deg) translate3d(-28%, -336%, 0);
+}
+.ajax-loader .paw:nth-child(7), .ajax-loader2 .paw:nth-child(7), .ajax-loader3 .paw:nth-child(7), .ajax-loader4 .paw:nth-child(7) {
+  animation-delay: 6.5s;
+  transform: rotate(1deg) translate3d(7%, -336%, 0);
+}
+.ajax-loader .paw:nth-child(8), .ajax-loader2 .paw:nth-child(8), .ajax-loader3 .paw:nth-child(8), .ajax-loader4 .paw:nth-child(8) {
+  animation-delay: 6s;
+  transform: rotate(0deg) scaleX(-1) translate3d(40%, -400%, 0);
+}
+.ajax-loader .paw:nth-child(8), .ajax-loader2 .paw:nth-child(8), .ajax-loader3 .paw:nth-child(8), .ajax-loader4 .paw:nth-child(8) {
+  animation-delay: 6s;
+  transform: rotate(1deg) scaleX(-1) translate3d(8%, -400%, 0);
+}
+.ajax-loader .paw:nth-child(9), .ajax-loader2 .paw:nth-child(9), .ajax-loader3 .paw:nth-child(9), .ajax-loader4 .paw:nth-child(9) {
+  animation-delay: 5.5s;
+  transform: rotate(0deg) translate3d(-36%, -432%, 0);
+}
+.ajax-loader .paw:nth-child(10), .ajax-loader2 .paw:nth-child(10), .ajax-loader3 .paw:nth-child(10), .ajax-loader4 .paw:nth-child(10) {
+  animation-delay: 5s;
+  transform: rotate(0deg) scaleX(-1) translate3d(50%, -500%, 0);
+}
+.ajax-loader .paw:nth-child(11), .ajax-loader2 .paw:nth-child(11), .ajax-loader3 .paw:nth-child(11), .ajax-loader4 .paw:nth-child(11) {
+  animation-delay: 4.5s;
+  transform: rotate(0deg) translate3d(-44%, -528%, 0);
+}
+.ajax-loader .paw:nth-child(12), .ajax-loader2 .paw:nth-child(12), .ajax-loader3 .paw:nth-child(12), .ajax-loader4 .paw:nth-child(12) {
+  animation-delay: 4s;
+  transform: rotate(0deg) scaleX(-1) translate3d(60%, -600%, 0);
+}
+.ajax-loader .paw:nth-child(13), .ajax-loader2 .paw:nth-child(13), .ajax-loader3 .paw:nth-child(13), .ajax-loader4 .paw:nth-child(13) {
+  animation-delay: 3.5s;
+  transform: rotate(0deg) translate3d(-52%, -624%, 0);
+}
+.ajax-loader .paw:nth-child(14), .ajax-loader2 .paw:nth-child(14), .ajax-loader3 .paw:nth-child(14), .ajax-loader4 .paw:nth-child(14) {
+  animation-delay: 3s;
+  transform: rotate(0deg) scaleX(-1) translate3d(70%, -700%, 0);
+}
+.ajax-loader .paw:nth-child(15), .ajax-loader2 .paw:nth-child(15), .ajax-loader3 .paw:nth-child(15), .ajax-loader4 .paw:nth-child(15) {
+  animation-delay: 2.5s;
+  transform: rotate(0deg) translate3d(-60%, -720%, 0);
+}
+.ajax-loader .paw:nth-child(16), .ajax-loader2 .paw:nth-child(16), .ajax-loader3 .paw:nth-child(16), .ajax-loader4 .paw:nth-child(16) {
+  animation-delay: 2s;
+  transform: rotate(0deg) scaleX(-1) translate3d(80%, -800%, 0);
+}
+.ajax-loader .paw:nth-child(17), .ajax-loader2 .paw:nth-child(17), .ajax-loader3 .paw:nth-child(17), .ajax-loader4 .paw:nth-child(17) {
+  animation-delay: 1.5s;
+  transform: rotate(0deg) translate3d(-68%, -816%, 0);
+}
+.ajax-loader .paw:nth-child(18), .ajax-loader2 .paw:nth-child(18), .ajax-loader3 .paw:nth-child(18), .ajax-loader4 .paw:nth-child(18) {
+  animation-delay: 1s;
+  transform: rotate(0deg) scaleX(-1) translate3d(90%, -900%, 0);
+}
+.ajax-loader .paw:nth-child(19), .ajax-loader2 .paw:nth-child(19), .ajax-loader3 .paw:nth-child(19), .ajax-loader4 .paw:nth-child(19) {
+  animation-delay: 0.5s;
+  transform: rotate(0deg) translate3d(-76%, -912%, 0);
+}
+.ajax-loader .paw:nth-child(20), .ajax-loader2 .paw:nth-child(20), .ajax-loader3 .paw:nth-child(20), .ajax-loader4 .paw:nth-child(20) {
+  animation-delay: 0s;
+  transform: rotate(0deg) scaleX(-1) translate3d(100%, -1000%, 0);
+}
+.no-cssanimations .ajax-loader .paw, .no-cssanimations .ajax-loader2 .paw, .no-cssanimations .ajax-loader3 .paw, .no-cssanimations .ajax-loader4 .paw {
+  opacity: 1;
+}
+
+.ajax-loader {
+  top: 15%;
+  left: 10%;
+  transform: rotate(-1deg) translate(-50%, 0%);
+}
+
+.ajax-loader2 {
+  top: 15%;
+  right: 20%;
+  transform: rotate(-10deg) translate(-50%, 0%);
+}
+
+.ajax-loader3 {
+  top: 45%;
+  left: 30%;
+  transform: rotate(150deg) translate(-50%, 0%);
+}
+
+.ajax-loader4 {
+  top: 55%;
+  right: 10%;
+  transform: rotate(180deg) translate(-50%, 0%);
+}
+
+@keyframes pawAnimation {
+  0% {
+    opacity: 0.2;
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes path1 {
+  0% {
+    transform: rotate(0deg) scaleX(-1) translate3d(0%, -50%, 0);
+  }
+  30% {
+    transform: rotate(20deg) scaleX(-1) translate3d(-35%, -60%, 0);
+  }
+  100% {
+    transform: rotate(20deg) scaleX(-1) translate3d(0%, -80%, 0);
+  }
+}
+.paw2 {
+  width: 1.5em;
+  height: 1em;
+  animation: 20100ms pawAnimation ease-in-out infinite;
+  opacity: 0;
+}
+.paw2 svg {
+  width: 100%;
+  height: 100%;
+}
+.paw2 .icon {
+  fill: #d31145;
+}
+.paw2:nth-child(odd) {
+  transform: rotate(0deg);
+}
+.paw2:nth-child(even) {
+  transform: rotate(0deg) scaleX(-1) translate(15%, -50%);
+}
+.paw2:nth-child(1) {
+  animation-delay: 19.5s;
+  transform: rotate(0deg) translate3d(-4%, -48%, 0);
+}
+.paw2:nth-child(1) {
+  animation-delay: 19.5s;
+  transform: rotate(-8deg) translate3d(30%, -50%, 0);
+}
+.paw2:nth-child(2) {
+  animation-delay: 19s;
+  transform: rotate(0deg) scaleX(-1) translate3d(10%, -100%, 0);
+}
+.paw2:nth-child(2) {
+  animation-delay: 19s;
+  transform: rotate(-8deg) scaleX(-1) translate3d(-30%, -120%, 0);
+}
+.paw2:nth-child(3) {
+  animation-delay: 18.5s;
+  transform: rotate(0deg) translate3d(-12%, -144%, 0);
+}
+.paw2:nth-child(3) {
+  animation-delay: 18.5s;
+  transform: rotate(0deg) translate3d(45%, -144%, 0);
+}
+.paw2:nth-child(4) {
+  animation-delay: 18s;
+  transform: rotate(0deg) scaleX(-1) translate3d(20%, -200%, 0);
+}
+.paw2:nth-child(4) {
+  animation-delay: 18s;
+  transform: rotate(0deg) scaleX(-1) translate3d(-32%, -200%, 0);
+}
+.paw2:nth-child(5) {
+  animation-delay: 17.5s;
+  transform: rotate(0deg) translate3d(-20%, -240%, 0);
+}
+.paw2:nth-child(5) {
+  animation-delay: 17.5s;
+  transform: rotate(0deg) translate3d(40%, -240%, 0);
+}
+.paw2:nth-child(6) {
+  animation-delay: 17s;
+  transform: rotate(0deg) scaleX(-1) translate3d(30%, -300%, 0);
+}
+.paw2:nth-child(6) {
+  animation-delay: 17s;
+  transform: rotate(0deg) scaleX(-1) translate3d(-30%, -300%, 0);
+}
+.paw2:nth-child(7) {
+  animation-delay: 16.5s;
+  transform: rotate(0deg) translate3d(-28%, -336%, 0);
+}
+.paw2:nth-child(7) {
+  animation-delay: 16.5s;
+  transform: rotate(1deg) translate3d(7%, -336%, 0);
+}
+.paw2:nth-child(8) {
+  animation-delay: 16s;
+  transform: rotate(0deg) scaleX(-1) translate3d(40%, -400%, 0);
+}
+.paw2:nth-child(8) {
+  animation-delay: 16s;
+  transform: rotate(1deg) scaleX(-1) translate3d(8%, -400%, 0);
+}
+.paw2:nth-child(9) {
+  animation-delay: 15.5s;
+  transform: rotate(0deg) translate3d(-36%, -432%, 0);
+}
+.paw2:nth-child(10) {
+  animation-delay: 15s;
+  transform: rotate(0deg) scaleX(-1) translate3d(50%, -500%, 0);
+}
+.paw2:nth-child(11) {
+  animation-delay: 14.5s;
+  transform: rotate(0deg) translate3d(-44%, -528%, 0);
+}
+.paw2:nth-child(12) {
+  animation-delay: 14s;
+  transform: rotate(0deg) scaleX(-1) translate3d(60%, -600%, 0);
+}
+.paw2:nth-child(13) {
+  animation-delay: 13.5s;
+  transform: rotate(0deg) translate3d(-52%, -624%, 0);
+}
+.paw2:nth-child(14) {
+  animation-delay: 13s;
+  transform: rotate(0deg) scaleX(-1) translate3d(70%, -700%, 0);
+}
+.paw2:nth-child(15) {
+  animation-delay: 12.5s;
+  transform: rotate(0deg) translate3d(-60%, -720%, 0);
+}
+.paw2:nth-child(16) {
+  animation-delay: 12s;
+  transform: rotate(0deg) scaleX(-1) translate3d(80%, -800%, 0);
+}
+.paw2:nth-child(17) {
+  animation-delay: 11.5s;
+  transform: rotate(0deg) translate3d(-68%, -816%, 0);
+}
+.paw2:nth-child(18) {
+  animation-delay: 11s;
+  transform: rotate(0deg) scaleX(-1) translate3d(90%, -900%, 0);
+}
+.paw2:nth-child(19) {
+  animation-delay: 10.5s;
+  transform: rotate(0deg) translate3d(-76%, -912%, 0);
+}
+.paw2:nth-child(20) {
+  animation-delay: 10s;
+  transform: rotate(0deg) scaleX(-1) translate3d(100%, -1000%, 0);
+}
+
+.conteneurHero .conteneur-titre * {
+  text-align: center;
+}
+
+.les-premiers-pas {
+  font-size: 55px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.glitch {
+  font-size: 55px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 black, 0.025em 0.04em 0 #fffc00;
+  animation: glitch 725ms infinite 3s;
+}
+
+.glitch span {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.glitch span:first-child {
+  animation: glitch 500ms infinite 3s;
+  clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+  transform: translate(-0.04em, -0.03em);
+  opacity: 0.75;
+}
+
+.glitch span:last-child {
+  animation: glitch 375ms infinite 3s;
+  clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+  transform: translate(0.04em, 0.03em);
+  opacity: 0.75;
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 black, 0.025em 0.04em 0 #fffc00;
+  }
+  5% {
+    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 black, 0.025em 0.04em 0 #fffc00;
+  }
+  6% {
+    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 black, 0.025em 0.04em 0 #fffc00;
+  }
+  16% {
+    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 black, 0.025em 0.04em 0 #fffc00;
+  }
+  17% {
+    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 black, 0.025em 0.04em 0 #fffc00;
+  }
+  33% {
+    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 black, 0.025em 0.04em 0 #fffc00;
+  }
+  100% {
+    text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 black, -0.04em -0.025em 0 #fffc00;
+  }
+}
+.anim {
+  text-align: center;
+  padding-top: 100px;
+  font-family: "Montserrat";
+  font-weight: 800;
+  color: black;
+  font-size: 80px;
+  animation: glitch2 2s infinite;
+}
+
+.anim::after {
+  position: absolute;
+  content: attr(data-text);
+  bottom: 0;
+  left: 0;
+  color: black;
+  background-color: white;
+  width: 100%;
+  visibility: hidden;
+  animation: clip 2s infinite;
+}
+
+.anim:hover {
+  animation: glitch2 2s infinite;
+}
+
+.anim:hover::after {
+  animation: clip 2s infinite;
+}
+
+/*# sourceMappingURL=style.css.map */

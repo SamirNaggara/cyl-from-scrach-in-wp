@@ -1,0 +1,102 @@
+@use 'base';
+
+.hero{
+    // background-color: base.$primary-color;
+
+    .conteneurHero{
+        height: 100vh;
+        width: 90%;
+        max-width: 1200px;
+        display: flex;
+        margin: 0 auto;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+
+        .logo{
+            width: 30%;
+        background-image: url(../images/mascotte-v1.png);
+    background-repeat: no-repeat;
+    background-size: 305px;
+    background-position: 10% 50%;
+
+        }
+
+        
+    
+        .conteneur{
+            width: 70%;
+    
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+    
+            padding: 0 80px;
+
+            .conteneur-logo{
+                width: 20%
+            }
+
+            .conteneur-titre{
+                width: 80%;
+            }
+            >*{
+                animation: apparait;
+                animation-duration: 0.5s;
+                animation-timing-function: linear;
+                animation-fill-mode: forwards;
+                opacity: 0;
+                animation-delay: 4.5s;
+
+            }
+
+            p.dans-le{
+                font-size: 40px;
+                margin: 24px;
+            }
+    
+           
+    
+            h1{
+                font-size: 50px;
+                margin-bottom: 30px;
+                
+                text-transform: uppercase;
+                font-weight: bold;
+              
+            }
+    
+            p.description{
+                opacity: 0;
+                font-size: 25px;
+                margin-bottom: 50px;
+                margin-top: 56px;
+                color: white;
+                line-height: 42px;
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+               
+                
+                
+
+    
+            }
+    
+            a.cta{
+                text-decoration: none;
+                color: white;
+                background-color: base.$primary-color;
+    
+                padding: 16px 40px;
+                text-transform: uppercase;
+                
+                
+
+            }
+    }
+
+
+    
+    }
+}

@@ -1,0 +1,48 @@
+@use 'base';
+
+
+.conteneurMenu{
+    
+    position:fixed;
+    width:100%;
+
+  
+    background-color: #ffffffcc;
+  
+    >div{
+      width: 100%;
+      margin: 0 auto;
+      max-width: 1600px;
+      display: flex;
+    }
+    
+  
+    .conteneurLogo{
+        width:50%;
+        display: flex;
+        align-items: center;
+
+        p{
+            font-family: base.$police-principal;
+            font-size: 23px;
+            margin-left: 100px;
+        }
+    }
+    nav{
+      
+      width: 50%;
+      height: 92px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      a{
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+        margin: 0 16px;
+      }
+      
+    
+    }
+  }
