@@ -1,5 +1,12 @@
 document.addEventListener("DOMContentLoaded", function() {
 
+
+
+//     $('#circleDrop').click(function(){
+//         $('.card-middle').slideToggle();
+//         $('.close').toggleClass('closeRotate');
+//       });
+
 //     //Desactive le scroll pendant 7 seconde (soit modifier ici, soit mettre sur true et supprimer les lignes 5 a 9)
 //     firstAnimationIsFinish = true;
 //     setTimeout(firstAnimationFinish, 7000)
@@ -196,6 +203,58 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }, 400)
     }
+
+
+    // Glissement de la carte dans "Formation"
+
+    var containerCard = document.querySelectorAll('.formations article');
+    
+for(i = 0; i < containerCard.length; i++){
+
+    let button = containerCard[i].querySelector(".circle-button")
+    let middleCard = containerCard[i].querySelector(".card-middle")
+    let croix = containerCard[i].querySelector(".close")
+    
+  button.addEventListener('click', function(event){
+    
+    event.preventDefault();
+
+    // var container = document.getElementById(this.dataset.container);
+
+    if (!middleCard.classList.contains('active')) {
+        console.log(button);
+        middleCard.classList.add('active');
+        // middleCard.style.height = 'auto';
+        middleCard.style.maxHeight = '300px';
+        // middleCard.style.padding = '30px';
+
+        croix.classList.toggle('closeRotate');
+
+      var height = middleCard.clientHeight + 'px';
+
+    //   middleCard.style.height = '0px';
+
+      setTimeout(function () {
+        // middleCard.style.height = height;
+      }, 0);
+      
+      
+      
+    } else {
+      
+        middleCard.style.maxHeight = '0px';
+        // middleCard.style.padding = '0px';
+        croix.classList.toggle('closeRotate');
+
+   
+        middleCard.classList.remove('active');
+
+      
+    }
+    
+  });
+
+}
 
 
 });

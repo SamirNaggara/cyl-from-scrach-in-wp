@@ -1,43 +1,174 @@
 .blocPourquoiCyl{
-
     display: flex;
     justify-content: center;
     align-items: center;
     .conteneurBloc{
-        width: 80%;
-        max-width: 960px;
+  
+        max-width: 1600px;
         margin: 0 auto;
-        
-        
-
         h2{
             text-align: center;
             margin: 32px 0;
             font-weight: bold;
-        }
-
-        .conteneurCards{
-           display: flex;
-           justify-content: space-between;
-           align-items: center;
-
-           >.card{
-            width: 25%;
-            height: 200px;
-            border: 5px solid black;
-
-                h3{
-                    text-align: center;
-                    font-size: 20px;
-                    margin: 16px;
-                }
-
-                p{
-                    
-                }
-            }
-        }
-
-        
+            font-size: 50px;
+        }      
     }
 }
+
+
+// Animation des cartes !
+
+
+.container {
+    max-width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 35px;
+    margin: 0 auto;
+    margin-top: 48px;
+  
+
+    .cardPourquoi {
+      position: relative;
+      width: 300px;
+      height: 400px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+
+      .face {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        
+
+        h4{
+            color: black;
+            font-size: 22px;
+            text-align: center;
+            margin: 24px 0;
+            font-weight: bold;
+        }
+
+        p{
+            color: black;
+            font-size: 18px;
+            line-height: 28px;
+
+            padding-top: 16px;
+        }
+
+        a{
+            
+            display: block;
+            width: 220px;
+
+            position: absolute;
+            bottom: 88px;
+            padding: 8px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: 0.5s;
+            text-align: center;
+        }
+
+        &.face1 {
+          box-sizing: border-box;
+          padding: 20px;
+          align-items: flex-start;
+
+          h3 {
+            margin: 0;
+            padding: 0;
+            
+          }
+
+     
+
+          
+
+         
+        }
+
+        &.face2 {
+          transition: 0.5s;
+
+          h3 {
+            margin: 0;
+            padding: 0;
+            font-size: 3em;
+            color: #fff;
+            transition: 0.5s;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+          }
+        }
+      }
+    }
+
+    .cardPourquoi:hover .face.face2 {
+      height: 60px;
+
+      h4 {
+        font-size: 2em;
+      }
+    }
+
+    .cardPourquoi:nth-child(1) .face.face2 {
+      background-image: linear-gradient(
+        40deg,
+        #D937FB 0%,
+        #7701E8 45%,
+        #760989 100%
+      );
+      border-radius: 15px;
+    }
+
+    .cardPourquoi:nth-child(2) .face.face2 {
+      background-image: linear-gradient(
+        40deg,
+        #7701E8 0%,
+        #760989 45%,
+        #D937FB 100%
+      );
+      border-radius: 15px;
+    }
+
+    .cardPourquoi:nth-child(3) .face.face2 {
+      background-image: linear-gradient(
+        40deg,
+        #760989 0%,
+        #7701E8 45%,
+        #D937FB 100%
+      );
+      border-radius: 15px;
+    }
+}
+
+
+//Couleur des 3 boutons
+
+.cardPourquoi .la-pratique a{
+    background-color: #2196f3;
+}
+
+.cardPourquoi .comment-apprendre a{
+    background-color: #e91e63;
+}
+
+.cardPourquoi .pour-coder a{
+    background-color: #23c186;
+}
+

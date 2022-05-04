@@ -2,11 +2,13 @@
 
 .hero{
     // background-color: base.$primary-color;
+    position: relative;
+    
 
     .conteneurHero{
         height: 100vh;
-        width: 90%;
-        max-width: 1200px;
+        width: 100%;
+        max-width: 1600px;
         display: flex;
         margin: 0 auto;
         justify-content: space-between;
@@ -14,31 +16,38 @@
 
         .logo{
             width: 30%;
-        background-image: url(../images/mascotte-v1.png);
-    background-repeat: no-repeat;
-    background-size: 305px;
-    background-position: 10% 50%;
+            background-image: url(../images/mascotte-v1.png);
+            background-repeat: no-repeat;
+            background-size: 305px;
+            background-position: left 85%;
+            z-index: 10;
 
         }
 
         
     
         .conteneur{
-            width: 70%;
+            width: 100%;
     
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
     
             padding: 0 80px;
 
-            .conteneur-logo{
-                width: 20%
+            .logo{
+                width: 300px;
+                height: 300px;
+                position: absolute;
+                bottom: 50px;
+                right: 100px;
+       
             }
 
             .conteneur-titre{
-                width: 80%;
+                width: 100%;
+                color: white;
             }
             >*{
                 animation: apparait;
@@ -50,10 +59,11 @@
 
             }
 
-            p.dans-le{
-                font-size: 40px;
-                margin: 24px;
+            .les-premiers-pas{
+                line-height: 80px;
             }
+
+         
     
            
     
@@ -75,28 +85,71 @@
                 line-height: 42px;
                 background-clip: text;
                 -webkit-background-clip: text;
-                color: transparent;
+               
+
+                color: white;
                
                 
                 
 
     
             }
-    
-            a.cta{
-                text-decoration: none;
-                color: white;
-                background-color: base.$primary-color;
-    
-                padding: 16px 40px;
-                text-transform: uppercase;
-                
-                
 
+            .conteneur-cta{
+
+            
+    
+                a.cta{
+                    text-decoration: none;
+                    color: white;
+                
+        
+                    padding: 16px 40px;
+                    text-transform: uppercase;
+
+                    background-color: white;
+                    color: purple;
+                    border: 2px solid white;
+                }
+
+                a.cta:last-child{
+                    background-color: transparent;
+                    color: white;
+                    
+                   
+                }
             }
-    }
+        }
 
 
     
     }
+}
+
+
+// Pour faire la vugue du premier bloc
+.custom-shape-divider-bottom-1651429820 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+
+    pointer-events: none;
+}
+
+.custom-shape-divider-bottom-1651429820 svg {
+    position: relative;
+    display: block;
+    width: calc(218% + 1.3px);
+    height: 500px;
+    transform: rotateY(180deg);
+    
+    
+}
+
+.custom-shape-divider-bottom-1651429820 .shape-fill {
+    fill: white;
+    
 }
