@@ -13,6 +13,7 @@ html{
   scroll-snap-type: y mandatory;
   transition:3s;
   font-family: $police-principal;
+  scroll-behavior: smooth;
   // ::-webkit-scrollbar {
   //   // display: none;
     

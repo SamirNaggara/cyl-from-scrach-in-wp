@@ -22,10 +22,10 @@
                 </div>
                 <nav class="menu">
                     <a href="">Accueil</a>
-                    <a href="">Nos formations</a>
+                    <a href="#formations">Nos formations</a>
                     <a href="">Prestations</a>
-                    <a href="">Blog</a>
-                    <a href="">Contact</a>
+                    <a href="https://blog.codeyourlife.fr/">Blog</a>
+                    <a href="#contact">Contact</a>
                 </nav>
             </div>
         </div>
@@ -220,11 +220,11 @@
                 </div>
             </section>
 
-            <section class="formations">
-                
+            <section class="formations" id="formations">
+                <h2>Les formations</h2>
                 <div class="conteneur">
-                
-                    <article class="row">
+                   
+                    <article class="row html">
                         <div class="small-7 medium-5 large-4 column end small-centered card">
                             <div class="card-top">
                                 <a href="#0">
@@ -238,15 +238,19 @@
                                 <div class="circle-button" id="circleDrop"><img class="close" src="images/close.svg"/></div>
                             </div>
                             <div class="card-middle">
-                                <p class="more">HTML/CSS est le langage indispensable pour faire du web.
-                                    Pourquoi ne pas l'apprendre dés maintenant ?</p>
+                                <p class="more">HTML/CSS est le langage de base du web.
+                                    Pourquoi ne pas l'apprendre maintenant ?</p>
+                               
+                                <a href="#">En savoir plus</a>
+
+                          
                             </div>
                             <div class="card-bottom text-center">
                                 <h3 class="card-title">Formation HTML/CSS</h3>
                             </div>
                         </div>
                     </article>
-                    <article class="row">
+                    <article class="row formation-gratuite">
                         <div class="small-7 medium-5 large-4 column end small-centered card">
                             <div class="card-top">
                                 <a href="#0">
@@ -262,13 +266,14 @@
                             <div class="card-middle">
                                 <p class="more">Le formation gratuite qui te permet d'en savoir plus sur l'univers du developpement ! 
                                 </p>
+                                <a href="#">En savoir plus</a>
                             </div>
                             <div class="card-bottom text-center">
                                 <h3 class="card-title">Formation Orientation</h3>
                             </div>
                         </div>
                     </article>
-                    <article class="row">
+                    <article class="row algo">
                         <div class="small-7 medium-5 large-4 column end small-centered card">
                             <div class="card-top">
                                 <a href="#0">
@@ -285,12 +290,34 @@
                                 <p class="more">Tout les langages de developpemnt s'appuient sur de l'algorythmie.
                                     C'est le moment de l'apprendre !
                                 </p>
+                                <a href="#">En savoir plus</a>
                             </div>
                             <div class="card-bottom text-center">
                                 <h3 class="card-title">Formation Algorythmie</h3>
                             </div>
                         </div>
                     </article>
+                </div>
+            </section>
+            <section class="contact" id="contact">
+                <div class="conteneur">
+                    <h2>Ecrivez nous</h2>
+                    <form action="contact.php" method="post">
+                        <div class="conteneurEmail">
+                            <label for="E-mail">Votre Mail</label>
+                            <input id="email" type="email" name="email" placeholder="mon-mail@gmail.fr"/>
+                        </div> 
+                        
+
+                        
+            
+            
+            <!--            Zone de texte-->
+                        <div class="conteneurMessage">
+                            <label for="message">Votre message</label>
+                            <textarea row="30" col="50" placeholder="Ecrivez nous votre message ici" id="message" name="message"></textarea>
+                        </div>
+                    </form>
                 </div>
             </section>
 

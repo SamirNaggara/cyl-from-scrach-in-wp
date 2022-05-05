@@ -9,6 +9,7 @@ html {
   scroll-snap-type: y mandatory;
   transition: 3s;
   font-family: "Poppins";
+  scroll-behavior: smooth;
 }
 
 body section {
@@ -428,6 +429,11 @@ body section {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   transition: 0.5s;
   text-align: center;
+}
+.container .cardPourquoi .face a:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  background: #fff;
+  color: #000;
 }
 .container .cardPourquoi .face.face1 {
   box-sizing: border-box;
@@ -1086,6 +1092,13 @@ body {
   background: #edf7fa;
 }
 
+.formations h2 {
+  text-align: center;
+  padding-top: 120px;
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
 .formations .conteneur {
   display: flex;
   justify-content: space-between;
@@ -1109,10 +1122,40 @@ body {
   transition: 3s;
   line-height: 25px;
 }
+.formations .conteneur .card-middle a {
+  display: inline-block;
+  width: 120px;
+  padding: 8px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 16px;
+  display: block;
+}
+.formations .conteneur .card-middle a:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  background: #fff;
+  color: #000;
+}
+
+.html .card-middle a {
+  background-color: #2196f3;
+}
+
+.algo .card-middle a {
+  background-color: #e91e63;
+}
+
+.formation-gratuite .card-middle a {
+  background-color: #23c186;
+}
 
 .card {
   position: relative;
-  top: 20vh;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   border-radius: 0.75em;
   padding: 0;
@@ -1230,6 +1273,52 @@ h5,
 h6,
 p {
   font-family: Work Sans;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.contact .conteneur {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.contact .conteneur h2 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 80px;
+}
+.contact .conteneur form div > * {
+  display: block;
+}
+.contact .conteneur form label {
+  font-size: 22px;
+  padding-bottom: 8px;
+}
+.contact .conteneur form input {
+  height: 50px;
+  box-sizing: border-box;
+  transition-timing-function: ease-in-out;
+  transition-duration: 80ms;
+  font-size: 15px;
+  color: #3e4854;
+  box-shadow: inset 0 0 0 1px #d5dce3;
+  border-radius: 4px;
+  background-color: #fff;
+  vertical-align: middle;
+  transition-property: all;
+  outline-style: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0 16px;
+  line-height: 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 /*# sourceMappingURL=style.css.map */
