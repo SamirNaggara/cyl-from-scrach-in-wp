@@ -13,7 +13,6 @@ html {
 }
 
 body section {
-  scroll-snap-align: start;
   min-height: 100vh;
 }
 
@@ -1321,7 +1320,18 @@ p {
   -webkit-font-smoothing: antialiased;
 }
 
-.temoignage .carte1 {
+.slide-gauche, .slide-droite {
+  width: 75px;
+  height: 75px;
+  border: none;
+  background-color: white;
+  box-shadow: 0px 0px 20px -15px #4b4c4b;
+  border-radius: 50px;
+  text-align: center;
+  position: relative;
+}
+
+.carre-blanc .carte1 {
   background-color: white;
   width: 90em;
   margin: 0 auto;
@@ -1329,40 +1339,40 @@ p {
   border-radius: 15px;
   box-shadow: 0px 0px 20px -15px #4b4c4b;
 }
-.temoignage .carte1 .row {
+.carre-blanc .carte1 .row {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
 }
-.temoignage .carte1 .row .column-gauche {
+.carre-blanc .carte1 .row .column-gauche {
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
   flex: 1;
 }
-.temoignage .carte1 .row .column-gauche .photo {
+.carre-blanc .carte1 .row .column-gauche .photo {
   text-align: center;
 }
-.temoignage .carte1 .row .column-droite {
+.carre-blanc .carte1 .row .column-droite {
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
   flex: 2;
 }
-.temoignage .carte1 .row .column-droite .texte-temoignage {
+.carre-blanc .carte1 .row .column-droite .texte-temoignage {
   color: grey;
   margin-bottom: 2em;
   margin-top: 2em;
   padding-right: 4em;
 }
-.temoignage .carte1 .row .column-droite .nom-temoignage {
+.carre-blanc .carte1 .row .column-droite .nom-temoignage {
   color: #e1003c;
   font-weight: 600;
   font-size: 20px;
   margin-bottom: 1em;
 }
-.temoignage .carte1 .row .column-droite .location-temoignage {
+.carre-blanc .carte1 .row .column-droite .location-temoignage {
   color: grey;
 }
 
