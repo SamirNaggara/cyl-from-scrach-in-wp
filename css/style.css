@@ -1320,7 +1320,13 @@ p {
   -webkit-font-smoothing: antialiased;
 }
 
-.slide-gauche, .slide-droite {
+.conteneur-fleches {
+  display: flex;
+  justify-content: space-between;
+  min-height: 0 !important;
+  margin: 25px 175px;
+}
+.conteneur-fleches .slide-gauche, .conteneur-fleches .slide-droite {
   width: 75px;
   height: 75px;
   border: none;
@@ -1329,6 +1335,17 @@ p {
   border-radius: 50px;
   text-align: center;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.conteneur-fleches .slide-gauche img, .conteneur-fleches .slide-droite img {
+  height: 30px;
+}
+
+.carrousel {
+  min-height: 40vh !important;
+  margin-top: -185px;
 }
 
 .carre-blanc .carte1 {
@@ -1354,26 +1371,35 @@ p {
 .carre-blanc .carte1 .row .column-gauche .photo {
   text-align: center;
 }
+.carre-blanc .carte1 .row .column-gauche .photo img {
+  width: 35%;
+}
 .carre-blanc .carte1 .row .column-droite {
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
   flex: 2;
+  justify-content: center;
 }
-.carre-blanc .carte1 .row .column-droite .texte-temoignage {
+.carre-blanc .carte1 .row .column-droite .droite {
+  margin-bottom: 2vh;
+}
+.carre-blanc .carte1 .row .column-droite .droite .texte-temoignage {
   color: grey;
-  margin-bottom: 2em;
   margin-top: 2em;
   padding-right: 4em;
+  text-align: justify;
 }
-.carre-blanc .carte1 .row .column-droite .nom-temoignage {
+.carre-blanc .carte1 .row .column-droite .droite .nom-temoignage {
   color: #e1003c;
   font-weight: 600;
   font-size: 20px;
-  margin-bottom: 1em;
+  margin: 1em 0;
 }
-.carre-blanc .carte1 .row .column-droite .location-temoignage {
+.carre-blanc .carte1 .row .column-droite .droite .location-temoignage {
   color: grey;
+  opacity: 60%;
+  margin-left: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */
