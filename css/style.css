@@ -1,9 +1,11 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,300,200,100);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
 @font-face {
   font-family: helvetica;
   src: url("../polices/_H_HelveticaNeueInterface.ttf");
+}
+@font-face {
+  font-family: "graphik";
+  src: url("../polices/00.+Graphik-Medium-Web.woff2");
 }
 html {
   scroll-snap-type: y mandatory;
@@ -71,6 +73,8 @@ body section {
   width: 50%;
   display: flex;
   align-items: center;
+  color: black;
+  text-decoration: none;
 }
 .conteneurMenu .conteneurLogo p {
   font-family: "Poppins";
@@ -89,6 +93,17 @@ body section {
   color: black;
   font-size: 20px;
   margin: 0 16px;
+}
+.conteneurMenu nav a:last-child {
+  display: inline-block;
+  padding: 16px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+  text-align: center;
+  background-color: #e91e63;
 }
 
 #first-load {
@@ -565,6 +580,7 @@ section.bloc-cta-html .conteneurBloc .conteneur-boutons a {
   width: 30rem;
   height: 15rem;
   perspective: 150rem;
+  text-align: center;
 }
 .card-code-front, .card-code-back {
   position: absolute;
@@ -1121,6 +1137,7 @@ body {
   padding: 30px;
   transition: 3s;
   line-height: 25px;
+  font-size: 15px;
 }
 .formations .conteneur .card-middle a {
   display: inline-block;
@@ -1223,7 +1240,6 @@ body {
   overflow: hidden;
 }
 .card-middle .more {
-  font-family: Open Sans;
   font-weight: 400;
 }
 
@@ -1264,33 +1280,29 @@ body {
   transform: rotate(45deg);
 }
 
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  font-family: Work Sans;
-}
-
 .contact {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 960px;
-  margin: 0 auto;
+  font-family: graphik;
 }
 .contact .conteneur {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 90%;
 }
 .contact .conteneur h2 {
   font-size: 40px;
   font-weight: bold;
   margin-bottom: 80px;
+  font-family: graphik;
+  text-align: center;
+}
+.contact .conteneur form {
+  width: 40%;
 }
 .contact .conteneur form div > * {
   display: block;
@@ -1298,8 +1310,12 @@ p {
 .contact .conteneur form label {
   font-size: 22px;
   padding-bottom: 8px;
+  margin-top: 20px;
+  font-family: graphik;
 }
-.contact .conteneur form input {
+.contact .conteneur form input[type=email] {
+  width: 100%;
+  border: none;
   height: 50px;
   box-sizing: border-box;
   transition-timing-function: ease-in-out;
@@ -1319,6 +1335,49 @@ p {
   line-height: 1;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  font-family: graphik;
+}
+.contact .conteneur form input[type=email]:hover:not(:focus) {
+  box-shadow: inset 0 0 0 1px #aab5c5;
+}
+.contact .conteneur form input[type=email]:focus {
+  box-shadow: inset 0 0 0 1px #1fb6ff;
+}
+.contact .conteneur form textarea {
+  width: 100%;
+  min-height: 120px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 80ms;
+  font-size: 15px;
+  color: #3e4854;
+  border-radius: 4px;
+  background-color: #fff;
+  vertical-align: middle;
+  transition-property: all;
+  outline-style: none;
+  border-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 14px 16px;
+  line-height: 1.4;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  font-family: graphik;
+}
+.contact .conteneur form textarea:focus {
+  box-shadow: inset 0 0 0 1px #1fb6ff;
+}
+.contact .conteneur form input[type=submit] {
+  font-size: 15px;
+  width: 100%;
+  margin-top: 40px;
+  padding: 16px 0;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-family: graphik;
 }
 
 /*# sourceMappingURL=style.css.map */

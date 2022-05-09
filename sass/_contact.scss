@@ -2,21 +2,29 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 960px;
-    margin: 0 auto;
+   
+    font-family: graphik;
 
     .conteneur{
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 90%;
         h2{
             font-size: 40px;
             font-weight: bold;
             margin-bottom: 80px;
+            font-family: graphik;
+            text-align: center;
+
 
         }
 
         form{
+            width: 40%;
             div>*{
                 display: block;
             }
@@ -24,9 +32,14 @@
             label{
                 font-size: 22px;
                 padding-bottom: 8px;
+                margin-top: 20px;
+                font-family: graphik;
+
             }
 
-            input{
+            input[type="email"]{
+                width: 100%;
+                border: none;
                 height: 50px;
                 box-sizing: border-box;
                 transition-timing-function: ease-in-out;
@@ -46,6 +59,62 @@
                 line-height: 1;
                 text-rendering: optimizeLegibility;
                 -webkit-font-smoothing: antialiased;
+                font-family: graphik;
+
+
+
+                &:hover:not(:focus){
+                    box-shadow: inset 0 0 0 1px #aab5c5;
+                    
+                }
+
+                &:focus{
+                    box-shadow: inset 0 0 0 1px #1fb6ff;
+                }
+            }
+
+            textarea{
+                width: 100%;
+                min-height: 120px;
+                transition-timing-function: ease-in-out;
+                transition-duration: 80ms;
+                font-size: 15px;
+                color: #3e4854;
+                border-radius: 4px;
+                background-color: #fff;
+                vertical-align: middle;
+                transition-property: all;
+                outline-style: none;
+                border-width: 0;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                padding: 14px 16px;
+                line-height: 1.4;
+                text-rendering: optimizeLegibility;
+                -webkit-font-smoothing: antialiased;
+                box-sizing: border-box;
+                font-family: graphik;
+
+         
+            
+
+
+                &:focus{
+                    box-shadow: inset 0 0 0 1px #1fb6ff;
+                }
+            }
+
+            input[type="submit"]{
+                font-size: 15px;
+                width: 100%;
+                margin-top: 40px;
+                padding: 16px 0;
+                border: none;
+                color: white;
+                font-weight: bold;
+                font-family: graphik;
+
             }
         }
     }

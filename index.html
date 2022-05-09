@@ -17,15 +17,15 @@
     <body>
         <div class="conteneurMenu">
             <div>
-                <div class="conteneurLogo">
+                <a class="conteneurLogo" href="file:///C:/wamp64/www/codeyourlife/index.html">
                     <p>Code Your Life</p>
-                </div>
+                </a>
                 <nav class="menu">
                     <a href="">Accueil</a>
-                    <a href="#formations">Nos formations</a>
                     <a href="">Prestations</a>
                     <a href="https://blog.codeyourlife.fr/">Blog</a>
                     <a href="#contact">Contact</a>
+                    <a href="#formations">Nos formations</a>
                 </nav>
             </div>
         </div>
@@ -169,14 +169,14 @@
                                 </div>
                                 <code>
                                     <div class="indent">
-                                        <span class="string">Les élèves qui s’en sortent le mieux,
+                                        <span class="string">Pour être bien apprise, il faut plusieurs semaine d'intégration...
                                         </span>
                                     </div>
                                     <div class="indent">
                                         <span>&nbsp;</span>
                                     </div>
                                     <div class="indent">
-                                        <span class="method"> sont ceux qui connaissaient deja HTML/CSS et l’algorithmie en arrivant !
+                                        <span class="method">Sans attendre, commence des maintenant !
                                         </span>
                                     </div>
                                     <div class="indent">
@@ -202,14 +202,14 @@
                                 </div>
                                 <code>
                                     <div class="indent">
-                                        <span class="variable">Lorsqu’un élève suit une formation pour devenir developpeur,
+                                        <span class="variable">HTML/CSS et l'algorythmie sont les grands pilliers du web
                                         </span>
                                     </div>
                                     <div class="indent">
                                         <span>&nbsp;</span>
                                     </div>
                                     <div class="indent">
-                                        <span class="function">le programme est tellement intense qu’il ne retient que très peu d’informations.
+                                        <span class="function">...Les connaitre facilitent l'apprentissage de toutes les autres compétences du web
                                         </span>
                                     </div>
 
@@ -301,22 +301,18 @@
             </section>
             <section class="contact" id="contact">
                 <div class="conteneur">
-                    <h2>Ecrivez nous</h2>
                     <form action="contact.php" method="post">
+                        <h2>Ecrivez nous</h2>
+
                         <div class="conteneurEmail">
                             <label for="E-mail">Votre Mail</label>
                             <input id="email" type="email" name="email" placeholder="mon-mail@gmail.fr"/>
                         </div> 
-                        
-
-                        
-            
-            
-            <!--            Zone de texte-->
                         <div class="conteneurMessage">
-                            <label for="message">Votre message</label>
+                            <label for="message">Votre Message</label>
                             <textarea row="30" col="50" placeholder="Ecrivez nous votre message ici" id="message" name="message"></textarea>
                         </div>
+                        <input type="submit" value="Envoyer" class="degrade">
                     </form>
                 </div>
             </section>
