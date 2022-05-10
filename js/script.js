@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     // function([string1, string2],target id,[color1,color2])    
-    consoleText(['mais tu ne sais pas quelle formation choisir ?', 'mais tu n\'es pas sur que tu vas aimer ?', 'mais tu as peur de te lancer ?'], 'text',['pink','rebeccapurple','lightblue']);
+    consoleText(['mais tu ne sais pas quelle formation choisir ?', 'mais est-ce fait pour toi ?', 'mais tu as peur de te lancer ?'], 'text',['pink','rebeccapurple','lightblue']);
 
     function consoleText(words, id, colors) {
     if (colors === undefined) colors = ['#fff'];
@@ -255,6 +255,53 @@ for(i = 0; i < containerCard.length; i++){
   });
 
 }
+
+
+// Pour les accordeons
+
+
+  let titre = document.querySelectorAll('.accordion-item .heading')
+  console.log(titre)
+
+
+  titre.forEach(element => {
+  
+
+    element.addEventListener('click', function(e) {
+      e.preventDefault();
+      console.log("je me declenche")
+      console.log("C'est this : "+this)
+      let accordeonItem = element.closest(".accordion-item") 
+      console.log("C'est l'accordeon item : "+accordeonItem)
+      let content = accordeonItem.getElementsByClassName("content");
+
+
+      // Add the correct active class
+      if(accordeonItem.classList.contains('active')) {
+          // Remove active classes
+          accordeonItem.classList.remove('active');
+
+      } else {
+          // Remove active classes
+          accordeonItem.classList.remove('active');
+  
+          // Add the active class
+          accordeonItem.classList.add('active');
+
+          content.style.display = "block";
+
+      }
+  
+      // Show the content
+      
+      // $content.slideToggle(100);
+      document.querySelector('.accordion-item .content').not($content).slideUp('fast');
+    });
+
+});
+
+  
+
 
 
 });
