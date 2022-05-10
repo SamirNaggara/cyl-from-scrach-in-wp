@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     min-height: 0 !important;
-    margin: 25px 175px;
+    margin: 25px 320px;
 
     .slide-gauche, .slide-droite {
         width: 75px;
@@ -21,6 +21,29 @@
             height: 30px;
         }
     }
+
+    .slide-gauche {
+        transform: translateX(-100%);
+    }
+
+    .slide-droite {
+        transform: translateX(100%);
+    }
+
+    // .slide-gauche, .slide-droite::after {
+    //     content: " ";
+    //     position: absolute;
+    //     width: 75px;
+    //     height: 75px;
+    //     top: 50%;
+    //     left: 54%;
+    //     transform: translate(-50%, -50%) rotate(135deg);
+    // }
+
+    // .slide-droite::after {
+    //     left: 47%;
+    //     transform: translate(-50%, -50%) rotate(-45deg);
+    // }
 }
 
 
@@ -30,11 +53,21 @@
     margin-top: -185px;
 }
 
-.carre-blanc {
+.temoignage-active {
+    opacity: 1;
+    position: relative;
+    z-index: 900;
+}
+
+.temoignage-initial {
+
+    opacity: 1;
+    position: relative;
+    z-index: 900;
 
     .carte1 {
         background-color: white;
-        width: 90em;
+        width: 60em;
         margin: 0 auto;
         padding: 2em;
         border-radius: 15px;
@@ -56,7 +89,83 @@
                     text-align: center;
 
                     img {
-                        width: 35%;
+                        width: 50%;
+                    }
+                }
+
+            }
+
+            .column-droite {
+                display: flex;
+                flex-direction: column;
+                flex-basis: 100%;
+                flex: 2;
+                justify-content: center;
+
+                .droite {
+                    margin-bottom: 2vh;
+
+                    .texte-temoignage {
+                        color: grey;
+                        margin-top: 2em;
+                        padding-right: 4em;
+                        text-align: justify;
+                    }
+    
+                    .nom-temoignage {
+                        color: #e1003c;
+                        font-weight: 600;
+                        font-size: 20px;
+                        margin: 1em 0;
+                    }
+    
+                    .location-temoignage {
+                        color: grey;
+                        opacity: 60%;
+                        margin-left: 15px;
+                    }
+                }
+
+
+            }
+        }
+
+    }
+}
+
+.temoignages {
+
+    opacity: 0;
+    transition: transform .5s, opacity .5s, z-index .5s;
+    z-index: 100;
+    position: aboslute;
+    top: 0;
+
+    .carte1 {
+        background-color: white;
+        width: 60em;
+        margin: 0 auto;
+        padding: 2em;
+        border-radius: 15px;
+        box-shadow: 0px 0px 20px -15px #4b4c4b;
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+
+            .column-gauche {
+                display: flex;
+                flex-direction: column;
+                flex-basis: 100%;
+                flex: 1;
+
+                .photo {
+                    text-align: center;
+
+                    img {
+                        width: 50%;
                     }
                 }
 

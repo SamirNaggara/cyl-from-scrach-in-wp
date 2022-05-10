@@ -1324,7 +1324,7 @@ p {
   display: flex;
   justify-content: space-between;
   min-height: 0 !important;
-  margin: 25px 175px;
+  margin: 25px 320px;
 }
 .conteneur-fleches .slide-gauche, .conteneur-fleches .slide-droite {
   width: 75px;
@@ -1342,61 +1342,139 @@ p {
 .conteneur-fleches .slide-gauche img, .conteneur-fleches .slide-droite img {
   height: 30px;
 }
+.conteneur-fleches .slide-gauche {
+  transform: translateX(-100%);
+}
+.conteneur-fleches .slide-droite {
+  transform: translateX(100%);
+}
 
 .carrousel {
   min-height: 40vh !important;
   margin-top: -185px;
 }
 
-.carre-blanc .carte1 {
+.temoignage-active {
+  opacity: 1;
+  position: relative;
+  z-index: 900;
+}
+
+.temoignage-initial {
+  opacity: 1;
+  position: relative;
+  z-index: 900;
+}
+.temoignage-initial .carte1 {
   background-color: white;
-  width: 90em;
+  width: 60em;
   margin: 0 auto;
   padding: 2em;
   border-radius: 15px;
   box-shadow: 0px 0px 20px -15px #4b4c4b;
 }
-.carre-blanc .carte1 .row {
+.temoignage-initial .carte1 .row {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
 }
-.carre-blanc .carte1 .row .column-gauche {
+.temoignage-initial .carte1 .row .column-gauche {
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
   flex: 1;
 }
-.carre-blanc .carte1 .row .column-gauche .photo {
+.temoignage-initial .carte1 .row .column-gauche .photo {
   text-align: center;
 }
-.carre-blanc .carte1 .row .column-gauche .photo img {
-  width: 35%;
+.temoignage-initial .carte1 .row .column-gauche .photo img {
+  width: 50%;
 }
-.carre-blanc .carte1 .row .column-droite {
+.temoignage-initial .carte1 .row .column-droite {
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
   flex: 2;
   justify-content: center;
 }
-.carre-blanc .carte1 .row .column-droite .droite {
+.temoignage-initial .carte1 .row .column-droite .droite {
   margin-bottom: 2vh;
 }
-.carre-blanc .carte1 .row .column-droite .droite .texte-temoignage {
+.temoignage-initial .carte1 .row .column-droite .droite .texte-temoignage {
   color: grey;
   margin-top: 2em;
   padding-right: 4em;
   text-align: justify;
 }
-.carre-blanc .carte1 .row .column-droite .droite .nom-temoignage {
+.temoignage-initial .carte1 .row .column-droite .droite .nom-temoignage {
   color: #e1003c;
   font-weight: 600;
   font-size: 20px;
   margin: 1em 0;
 }
-.carre-blanc .carte1 .row .column-droite .droite .location-temoignage {
+.temoignage-initial .carte1 .row .column-droite .droite .location-temoignage {
+  color: grey;
+  opacity: 60%;
+  margin-left: 15px;
+}
+
+.temoignages {
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.5s, z-index 0.5s;
+  z-index: 100;
+  position: aboslute;
+  top: 0;
+}
+.temoignages .carte1 {
+  background-color: white;
+  width: 60em;
+  margin: 0 auto;
+  padding: 2em;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px -15px #4b4c4b;
+}
+.temoignages .carte1 .row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.temoignages .carte1 .row .column-gauche {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+.temoignages .carte1 .row .column-gauche .photo {
+  text-align: center;
+}
+.temoignages .carte1 .row .column-gauche .photo img {
+  width: 50%;
+}
+.temoignages .carte1 .row .column-droite {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 2;
+  justify-content: center;
+}
+.temoignages .carte1 .row .column-droite .droite {
+  margin-bottom: 2vh;
+}
+.temoignages .carte1 .row .column-droite .droite .texte-temoignage {
+  color: grey;
+  margin-top: 2em;
+  padding-right: 4em;
+  text-align: justify;
+}
+.temoignages .carte1 .row .column-droite .droite .nom-temoignage {
+  color: #e1003c;
+  font-weight: 600;
+  font-size: 20px;
+  margin: 1em 0;
+}
+.temoignages .carte1 .row .column-droite .droite .location-temoignage {
   color: grey;
   opacity: 60%;
   margin-left: 15px;
