@@ -267,7 +267,6 @@ body section {
   opacity: 0;
 }
 .bloc-tu-veux .conteneur .console-container {
-  font-family: Khula;
   font-size: 45px;
   height: 200px;
   width: 80%;
@@ -286,6 +285,20 @@ body section {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  padding-top: 96px;
+}
+.bloc-tu-veux .conteneur-cta > p {
+  line-height: 23px;
+  font-size: 18px;
+  padding: 0 46px;
+}
+.bloc-tu-veux .conteneur-cta .cta {
+  text-decoration: none;
+  color: white;
+  align-self: center;
+  background-color: #e91e63;
+  padding: 16px 40px;
+  text-transform: uppercase;
 }
 
 .developpeuse {
@@ -296,7 +309,6 @@ body section {
   white-space: nowrap;
   overflow: hidden;
   position: relative;
-  font-family: Khula;
   font-size: 45px;
 }
 
@@ -308,7 +320,7 @@ body section {
   position: absolute;
   padding-left: 0.5rem;
   top: 0.2rem;
-  left: 528px;
+  left: 578px;
   animation: openclose 15s ease-in-out infinite;
 }
 
@@ -433,10 +445,13 @@ body section {
   z-index: -1;
 }
 .accordion-item .content {
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: 1s;
 }
 .accordion-item .content p {
   margin-top: 0;
+  padding: 0 64px;
 }
 @media (min-width: 40rem) {
   .accordion-item .content {
