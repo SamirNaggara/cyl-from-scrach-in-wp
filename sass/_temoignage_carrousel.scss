@@ -30,6 +30,15 @@
                 height: 30px;
             }
         }
+
+        .slide-gauche:hover, .slide-droite:hover {
+            background-color: #E1003D;
+            transition: 0.8s;
+
+            img:hover {
+                color: white;
+            }
+        }
     
     
         .slide-gauche {

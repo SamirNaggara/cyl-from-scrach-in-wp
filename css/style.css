@@ -1406,6 +1406,13 @@ body {
 .carrousel .conteneur-fleches .slide-gauche img, .carrousel .conteneur-fleches .slide-droite img {
   height: 30px;
 }
+.carrousel .conteneur-fleches .slide-gauche:hover, .carrousel .conteneur-fleches .slide-droite:hover {
+  background-color: #E1003D;
+  transition: 0.8s;
+}
+.carrousel .conteneur-fleches .slide-gauche:hover img:hover, .carrousel .conteneur-fleches .slide-droite:hover img:hover {
+  color: white;
+}
 .carrousel .conteneur-fleches .slide-gauche {
   transform: translateX(-100%);
   left: 25em;

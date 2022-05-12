@@ -257,4 +257,15 @@ for(i = 0; i < containerCard.length; i++){
 }
 
 
+// CARROUSEL
+
+
+document.getElementById("bouton-gauche").addEventListener("click", gauche);
+document.getElementById("bouton-droit").addEventListener("click", droit);
+
+function gauche() {
+  console.log("test");
+  document.getElementById("carrousel").style.transform = "translateX(-100vw)"
+}
+
 });
