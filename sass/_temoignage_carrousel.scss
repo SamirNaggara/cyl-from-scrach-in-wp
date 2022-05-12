@@ -3,11 +3,15 @@
 .carrousel {
     transition: 3s;
     // transform: translateX(-100vw);
+    // position: relative;
 
     .conteneur-fleches {
-        left: 22em;
-        position: relative;
         z-index: 1000;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        position: relative;
+        top: 14em;
     
         .slide-gauche, .slide-droite {
             width: 75px;
@@ -17,7 +21,7 @@
             box-shadow: 0px 0px 20px -15px #4b4c4b;
             border-radius: 50px;
             text-align: center;
-            position: relative;
+            position: absolute;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -29,15 +33,14 @@
     
     
         .slide-gauche {
-            left: 8em;
-            top: 14em;
+
             transform: translateX(-100%);
+            left: 25em;
         }
     
         .slide-droite {
             transform: translateX(100%);
-            top: 9em;
-            left: 62em;
+            right: 24em;
         }
     
         // .slide-gauche, .slide-droite::after {
