@@ -261,7 +261,7 @@ for(i = 0; i < containerCard.length; i++){
 
 
 document.getElementById("bouton-gauche").addEventListener("click", gauche);
-document.getElementById("bouton-droit").addEventListener("click", droit);
+// document.getElementById("bouton-droit").addEventListener("click", droit);
 
 function gauche() {
   console.log("test");
