@@ -3,15 +3,16 @@
 .carrousel {
     transition: 3s;
     // transform: translateX(-100vw);
-    // position: relative;
+    position: relative;
+    // display: flex;
+    // justify-content: center;
 
     .conteneur-fleches {
         z-index: 1000;
         display: flex;
         justify-content: space-around;
-        flex-direction: row;
-        position: relative;
-        top: 14em;
+        // position: relative;
+        // top: 14em;
     
         .slide-gauche, .slide-droite {
             width: 75px;
@@ -21,7 +22,6 @@
             box-shadow: 0px 0px 20px -15px #4b4c4b;
             border-radius: 50px;
             text-align: center;
-            position: absolute;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -43,13 +43,13 @@
     
         .slide-gauche {
 
-            transform: translateX(-100%);
-            left: 25em;
+            // transform: translateX(-100%);
+            // left: 25em;
         }
     
         .slide-droite {
-            transform: translateX(100%);
-            right: 24em;
+            // transform: translateX(100%);
+            // right: 24em;
         }
     
         // .slide-gauche, .slide-droite::after {
@@ -70,6 +70,10 @@
     
     
     
+    .temoignages {
+        position: absolute;
+        // margin-left: 25vw;
+    }
     
     
     // .temoignage-active {
@@ -82,9 +86,10 @@
     
     .temoignage-initial {
     
-        position: absolute;
-        left: 28em;
-        top: 312em;
+        // position: absolute;
+        // left: 28em;
+        // top: 312em;
+        width: 100%;
     
         .carte1 {
             background-color: white;
@@ -158,11 +163,9 @@
     
     .temoignage2 {
     
-        opacity: 0;
-        z-index: 100;
-        position: absolute;
-        left: 28em;
-        top: 312em;
+        // position: absolute;
+        // left: 28em;
+        // top: 312em;
         margin-left: -100vw;
     
         .carte1 {
@@ -237,11 +240,9 @@
     
     .temoignage3 {
     
-        opacity: 0;
-        z-index: 100;
-        position: absolute;
-        left: 28em;
-        top: 312em;
+        // position: absolute;
+        // left: 28em;
+        // top: 312em;
         margin-left: 100vw;
     
         .carte1 {
