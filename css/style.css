@@ -266,7 +266,6 @@ body section {
   opacity: 0;
 }
 .bloc-tu-veux .conteneur .console-container {
-  font-family: Khula;
   font-size: 45px;
   height: 200px;
   width: 80%;
@@ -284,21 +283,19 @@ body section {
   width: 50%;
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-direction: column;
+  padding-top: 96px;
 }
-.bloc-tu-veux .conteneur-cta p {
-  font-size: 30px;
-  padding: 32px;
-  text-align: center;
-  margin-bottom: 150px;
-}
-.bloc-tu-veux .conteneur-cta .texte {
-  margin-top: 40px;
+.bloc-tu-veux .conteneur-cta > p {
+  line-height: 23px;
+  font-size: 18px;
+  padding: 0 46px;
 }
 .bloc-tu-veux .conteneur-cta .cta {
   text-decoration: none;
   color: white;
+  align-self: center;
+  background-color: #e91e63;
   padding: 16px 40px;
   text-transform: uppercase;
 }
@@ -311,7 +308,6 @@ body section {
   white-space: nowrap;
   overflow: hidden;
   position: relative;
-  font-family: Khula;
   font-size: 45px;
 }
 
@@ -323,7 +319,7 @@ body section {
   position: absolute;
   padding-left: 0.5rem;
   top: 0.2rem;
-  left: 528px;
+  left: 578px;
   animation: openclose 15s ease-in-out infinite;
 }
 
@@ -372,6 +368,96 @@ body section {
     text-indent: 0;
   }
 }
+.header {
+  text-align: center;
+}
+.header a {
+  text-decoration: none;
+  color: black;
+}
+
+.accordion {
+  width: 100%;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.accordion-item {
+  position: relative;
+}
+.accordion-item.active .heading {
+  color: #404040;
+}
+.accordion-item.active .icon:before {
+  background: #404040;
+}
+.accordion-item.active .icon:after {
+  width: 0;
+}
+.accordion-item .heading {
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+  font-size: 1rem;
+  position: relative;
+  padding: 1.5rem 1.5rem 1.5rem 4rem;
+  transition: 0.3s ease-in-out;
+}
+@media (min-width: 40rem) {
+  .accordion-item .heading {
+    font-size: 1.2rem;
+  }
+}
+.accordion-item .heading:hover {
+  color: #404040;
+}
+.accordion-item .heading:hover .icon:before, .accordion-item .heading:hover .icon:after {
+  background: #404040;
+}
+.accordion-item .icon {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 3px;
+  transform: translateY(-50%);
+}
+.accordion-item .icon:before, .accordion-item .icon:after {
+  content: "";
+  width: 1.25rem;
+  height: 0.25rem;
+  background: black;
+  position: absolute;
+  border-radius: 3px;
+  left: 50%;
+  top: 50%;
+  transition: 0.3s ease-in-out;
+  transform: translate(-50%, -50%);
+}
+.accordion-item .icon:after {
+  transform: translate(-50%, -50%) rotate(90deg);
+  z-index: -1;
+}
+.accordion-item .content {
+  max-height: 0;
+  overflow: hidden;
+  transition: 1s;
+}
+.accordion-item .content p {
+  margin-top: 0;
+  padding: 0 64px;
+}
+@media (min-width: 40rem) {
+  .accordion-item .content {
+    line-height: 1.75;
+  }
+}
+
 .blocPourquoiCyl {
   display: flex;
   justify-content: center;

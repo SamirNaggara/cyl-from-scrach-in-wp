@@ -209,52 +209,52 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var containerCard = document.querySelectorAll('.formations article');
     
-for(i = 0; i < containerCard.length; i++){
+  for(i = 0; i < containerCard.length; i++){
 
-    let button = containerCard[i].querySelector(".circle-button")
-    let middleCard = containerCard[i].querySelector(".card-middle")
-    let croix = containerCard[i].querySelector(".close")
+      let button = containerCard[i].querySelector(".circle-button")
+      let middleCard = containerCard[i].querySelector(".card-middle")
+      let croix = containerCard[i].querySelector(".close")
+      
+    button.addEventListener('click', function(event){
+      
+      event.preventDefault();
+
+      // var container = document.getElementById(this.dataset.container);
+
+      if (!middleCard.classList.contains('active')) {
+          console.log(button);
+          middleCard.classList.add('active');
+          // middleCard.style.height = 'auto';
+          middleCard.style.maxHeight = '300px';
+          // middleCard.style.padding = '30px';
+
+          croix.classList.toggle('closeRotate');
+
+        var height = middleCard.clientHeight + 'px';
+
+      //   middleCard.style.height = '0px';
+
+        setTimeout(function () {
+          // middleCard.style.height = height;
+        }, 0);
+        
+        
+        
+      } else {
+        
+          middleCard.style.maxHeight = '0px';
+          // middleCard.style.padding = '0px';
+          croix.classList.toggle('closeRotate');
+
     
-  button.addEventListener('click', function(event){
-    
-    event.preventDefault();
+          middleCard.classList.remove('active');
 
-    // var container = document.getElementById(this.dataset.container);
-
-    if (!middleCard.classList.contains('active')) {
-        console.log(button);
-        middleCard.classList.add('active');
-        // middleCard.style.height = 'auto';
-        middleCard.style.maxHeight = '300px';
-        // middleCard.style.padding = '30px';
-
-        croix.classList.toggle('closeRotate');
-
-      var height = middleCard.clientHeight + 'px';
-
-    //   middleCard.style.height = '0px';
-
-      setTimeout(function () {
-        // middleCard.style.height = height;
-      }, 0);
+        
+      }
       
-      
-      
-    } else {
-      
-        middleCard.style.maxHeight = '0px';
-        // middleCard.style.padding = '0px';
-        croix.classList.toggle('closeRotate');
+    });
 
-   
-        middleCard.classList.remove('active');
-
-      
-    }
-    
-  });
-
-}
+  }
 
 
 // CARROUSEL
@@ -268,61 +268,61 @@ for(i = 0; i < containerCard.length; i++){
 //   document.getElementById("carrousel").style.transform = "translateX(-100vw)"
 // }
 
-document.getElementById("bouton-gauche").addEventListener("click", gauche);
+  document.getElementById("bouton-gauche").addEventListener("click", gauche);
 
-function gauche() {
-  console.log("test");
-
-
-  var firstCurrent = document.getElementsByClassName("firstCurrent");
-  var firstGauche = document.getElementsByClassName("firstGauche");
-  var firstDroite = document.getElementsByClassName("firstDroite");
-  // Je met mes 3 cartes dans des variables grâce à leur ID pour changer leur CSS
-  var current = document.getElementById("current");
-  var gauche = document.getElementById("gauche");
-  var droite = document.getElementById("droite");
-
-  // Déplacement de la carte du milieu + opacité à 0
-  current.style.transform = 'translateX(-100vw)';
-  current.style.opacity = '0';  
-
-  // Déplacement de la carte à droite (au milieu) + opacité à 1
-  droite.style.transform = 'translateX(0)';
-  droite.style.opacity = '1';
-
-  // Déplacement de la carte à gauche (à gauche) son opacité reste à 0
-  gauche.style.transform = 'translateX(100)';
-
-  // On ajoute l'id 'gauche' à la carte mise à gauche, puis on lui retire l'id current
-
-  // firstCurrent.setAttribute('id', 'gauche');
-
-  // On ajoute l'id 'current' à la carte mise au milieu, puis on lui retire l'id droite
-  // droite.setAttribute('id', 'current');
-  // droite.removeAttribute('id', 'droite');
-  
-  // On ajoute l'id 'droite' à la carte mise à droite, puis on lui retire l'id gauche
-  // gauche.setAttribute('id', 'droite');
-  // gauche.removeAttribute('id', 'gauche');
-  
-  
-  
-  // if (initial.css.transform) {
-  //   console.log("toutafé");
-  // } else {
-  //   console.log("pas trouvé");
-  // }
+  function gauche() {
+    console.log("test");
 
 
-  // document.getElementsByClassName("temoignage-initial").style.opacity = 'translateX(-100vw)';
-  // document.getElementsByClassName("temoignage3").style.transform = 'translateX(0)';
+    var firstCurrent = document.getElementsByClassName("firstCurrent");
+    var firstGauche = document.getElementsByClassName("firstGauche");
+    var firstDroite = document.getElementsByClassName("firstDroite");
+    // Je met mes 3 cartes dans des variables grâce à leur ID pour changer leur CSS
+    var current = document.getElementById("current");
+    var gauche = document.getElementById("gauche");
+    var droite = document.getElementById("droite");
 
-  // Pas compris pourquoi ça ne fonctionnait pas avec un getelementsbyclassname mais fonctionne avec un queryselector ?
+    // Déplacement de la carte du milieu + opacité à 0
+    current.style.transform = 'translateX(-100vw)';
+    current.style.opacity = '0';  
 
-  // document.querySelector(".temoignage-initial").style.transform = 'translateX(-100vw)';
-  // document.querySelector(".temoignage3").style.transform = 'translateX(0)';
-  // document.querySelector(".temoignage3").style.opacity = '1';
-  // document.querySelector(".temoignage-initial").style.opacity = '0';
-}
+    // Déplacement de la carte à droite (au milieu) + opacité à 1
+    droite.style.transform = 'translateX(0)';
+    droite.style.opacity = '1';
+
+    // Déplacement de la carte à gauche (à gauche) son opacité reste à 0
+    gauche.style.transform = 'translateX(100)';
+
+    // On ajoute l'id 'gauche' à la carte mise à gauche, puis on lui retire l'id current
+    current.setAttribute('id', 'gauche');
+    current.removeAttribute('id', 'current');
+
+    // On ajoute l'id 'current' à la carte mise au milieu, puis on lui retire l'id droite
+    // droite.setAttribute('id', 'current');
+    // droite.removeAttribute('id', 'droite');
+    
+    // On ajoute l'id 'droite' à la carte mise à droite, puis on lui retire l'id gauche
+    // gauche.setAttribute('id', 'droite');
+    // gauche.removeAttribute('id', 'gauche');
+    
+    
+    
+    // if (initial.css.transform) {
+    //   console.log("toutafé");
+    // } else {
+    //   console.log("pas trouvé");
+    // }
+
+
+    // document.getElementsByClassName("temoignage-initial").style.opacity = 'translateX(-100vw)';
+    // document.getElementsByClassName("temoignage3").style.transform = 'translateX(0)';
+
+    // Pas compris pourquoi ça ne fonctionnait pas avec un getelementsbyclassname mais fonctionne avec un queryselector ?
+
+    // document.querySelector(".temoignage-initial").style.transform = 'translateX(-100vw)';
+    // document.querySelector(".temoignage3").style.transform = 'translateX(0)';
+    // document.querySelector(".temoignage3").style.opacity = '1';
+    // document.querySelector(".temoignage-initial").style.opacity = '0';
+  }
 
 });
