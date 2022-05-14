@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     // function([string1, string2],target id,[color1,color2])    
-    consoleText(['mais tu ne sais pas quelle formation choisir ?', 'mais tu n\'es pas sur que tu vas aimer ?', 'mais tu as peur de te lancer ?'], 'text',['pink','rebeccapurple','lightblue']);
+    consoleText(['mais tu ne sais pas quelle formation choisir ?', 'mais est-ce fait pour toi ?', 'mais tu as peur de te lancer ?'], 'text',['pink','rebeccapurple','lightblue']);
 
     function consoleText(words, id, colors) {
     if (colors === undefined) colors = ['#fff'];
@@ -255,17 +255,86 @@ for(i = 0; i < containerCard.length; i++){
   });
 
 }
+  
+  
+// Pour les accordeons
+
+  let titre = document.querySelectorAll('.accordion-item .heading')
+
+  console.log(titre)
 
 
-// CARROUSEL
+  titre.forEach(element => {
+      // Faire la liste des autres elements de titre
+      // titreCopy = [...titre]
+      // const indexCetElement = titreCopy.indexOf(5);
+      // if (indexCetElement > -1) {
+      //   array.splice(indexCetElement, 1); // 2nd parameter means remove one item only
+      // }
+
+      // console.log(titreCopy)
+       
+
+    element.addEventListener('click', function(e) {
+      e.preventDefault();
+      // console.log("je me declenche")
+      // console.log("C'est this : "+this)
+      let accordeonItem = element.closest(".accordion-item") 
+      // console.log("C'est l'accordeon item : "+accordeonItem)
+      let content = accordeonItem.getElementsByClassName("content")[0];
+      // console.log("C'est le content: "+content)
 
 
-document.getElementById("bouton-gauche").addEventListener("click", gauche);
-// document.getElementById("bouton-droit").addEventListener("click", droit);
+    
+   
 
-function gauche() {
-  console.log("test");
-  document.getElementById("carrousel").style.transform = "translateX(-100vw)"
-}
+      // Add the correct active class
+      if(accordeonItem.classList.contains('active')) {
+          // Remove active classes
+          accordeonItem.classList.remove('active');
+
+          // content.style.display = "none";
+          content.style.maxHeight = "0";
+
+
+      } else {
+          titre.forEach(unContenu => {
+            let accordeonItem2 = unContenu.closest(".accordion-item") 
+          let content2 = accordeonItem2.getElementsByClassName("content")[0];
+    
+            if(accordeonItem2.classList.contains('active')) {
+              accordeonItem2.classList.remove('active')
+              content2.style.maxHeight = "0"
+            }
+          })
+
+
+          // Remove active classes
+          accordeonItem.classList.remove('active');
+  
+          // Add the active class
+          accordeonItem.classList.add('active');
+
+          // content.style.display = "block";
+          content.style.maxHeight = "200px";
+
+
+          // On veut fermer tout les autres
+          
+
+      }
+  
+      // Show the content
+      
+      // $content.slideToggle(100);
+      // document.querySelector('.accordion-item .content').not(content).slideUp('fast');
+    });
+
+});
+
+  
+
+
+
 
 });
