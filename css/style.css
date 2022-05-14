@@ -1415,6 +1415,8 @@ body {
 }
 .carrousel .temoignage-initial {
   width: 100%;
+  transition: 0.8s;
+  transform: translateX(0vw);
 }
 .carrousel .temoignage-initial .carte1 {
   background-color: white;
@@ -1470,7 +1472,10 @@ body {
   margin-left: 15px;
 }
 .carrousel .temoignage2 {
-  margin-left: -100vw;
+  transform: translateX(-100vw);
+  width: 100%;
+  opacity: 0;
+  transition: 0.3s;
 }
 .carrousel .temoignage2 .carte1 {
   background-color: white;
@@ -1526,7 +1531,10 @@ body {
   margin-left: 15px;
 }
 .carrousel .temoignage3 {
-  margin-left: 100vw;
+  width: 100%;
+  transform: translateX(100vw);
+  opacity: 0;
+  transition: 0.8s;
 }
 .carrousel .temoignage3 .carte1 {
   background-color: white;
