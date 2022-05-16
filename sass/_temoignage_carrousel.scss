@@ -1,18 +1,23 @@
 // FLECHES
+// em = pratique pour faire exemple, je veux une police 1,5x plus grand que son parent (balise strong par exemple)
+// je met 1,5em, il sera 1,5x plus grand que son parent qui fait x pixel
+
+//Notre top 50% centre le haut de la carte.
+//On ajoute ensuite un transfrom translateY(-50%) pour centrer ce haut par rapport à la carte
+
+//Valeur justTranslate : premier argument selon X et le second selon Y (sur le JS changer le X et juste remettre le 50% sur le Y)
+
+
 
 .carrousel {
     transition: 3s;
-    // transform: translateX(-100vw);
     position: relative;
-    // display: flex;
-    // justify-content: center;
+    overflow: hidden;
 
     .conteneur-fleches {
         z-index: 1000;
         display: flex;
         justify-content: space-around;
-        // position: relative;
-        // top: 14em;
     
         .slide-gauche, .slide-droite {
             width: 75px;
@@ -25,10 +30,23 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            transform: translateY(-50%);
     
             img {
                 height: 30px;
             }
+        }
+
+        .slide-gauche {
+            position: absolute;
+            top: 50%;
+            left: 10%;
+        }
+
+        .slide-droite {
+            position: absolute;
+            top: 50%;
+            right: 10%;
         }
 
         .slide-gauche:hover, .slide-droite:hover {
@@ -39,40 +57,13 @@
                 color: white;
             }
         }
-    
-    
-        // .slide-gauche {
-
-        //     // transform: translateX(-100%);
-        //     // left: 25em;
-        // }
-    
-        // .slide-droite {
-        //     // transform: translateX(100%);
-        //     // right: 24em;
-        // }
-    
-        // .slide-gauche, .slide-droite::after {
-        //     content: " ";
-        //     position: absolute;
-        //     width: 75px;
-        //     height: 75px;
-        //     top: 50%;
-        //     left: 54%;
-        //     transform: translate(-50%, -50%) rotate(135deg);
-        // }
-    
-        // .slide-droite::after {
-        //     left: 47%;
-        //     transform: translate(-50%, -50%) rotate(-45deg);
-        // }
     }
-    
     
     
     .temoignages {
         position: absolute;
-        // margin-left: 25vw;
+        top: 50%;
+        transform: translateY(-50%);
     }
     
     
@@ -85,13 +76,8 @@
     // 1ERE CARTE DE TEMOIGNAGE
     
     .temoignage-initial {
-    
-        // position: absolute;
-        // left: 28em;
-        // top: 312em;
         width: 100%;
         transition: 0.8s;
-        transform: translateX(0vw);
 
     
         .carte1 {

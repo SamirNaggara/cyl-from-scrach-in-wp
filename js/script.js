@@ -274,7 +274,21 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log("test");
 
 
+    // ByClassNName = "elements" avec un s
+
+    // getby class sur toutes mes cartes et les stocker dans un éléments
+    // ex = firstcurrent[0], puis [1], puis [2]
+    // il reste indice 0 quand tu le bouge donc tu peux faire bouger comme tu veux
+
+    //faire disparaitre flèche gauche quand on est au bout, puis flèche droite aussi quand bout de droite
+
+    // au début on est au niveau 0, si clique gauche on décrémente de 1, droite on incrémente
+    // faire une condition si i = maVariable.length alors display none sur la flèche
+
+    //document. = cherche dans page, techniquement je peux stocker mon carrousel dans une variable et faire
+    // variable.getElements... et ça cherchera uniquement dans mon carrousel
     var firstCurrent = document.getElementsByClassName("firstCurrent");
+    console.log(firstCurrent[0]);
     var firstGauche = document.getElementsByClassName("firstGauche");
     var firstDroite = document.getElementsByClassName("firstDroite");
     // Je met mes 3 cartes dans des variables grâce à leur ID pour changer leur CSS
@@ -294,6 +308,7 @@ document.addEventListener("DOMContentLoaded", function() {
     gauche.style.transform = 'translateX(100)';
 
     // On ajoute l'id 'gauche' à la carte mise à gauche, puis on lui retire l'id current
+    // current.setAttribute('id', 'gauche').removeAttribute('id', 'current'); C'est possible ça ??
     current.setAttribute('id', 'gauche');
     current.removeAttribute('id', 'current');
 

@@ -15,6 +15,7 @@ html {
 }
 
 body section {
+  scroll-snap-align: start;
   min-height: 100vh;
 }
 
@@ -1468,6 +1469,7 @@ body {
 .carrousel {
   transition: 3s;
   position: relative;
+  overflow: hidden;
 }
 .carrousel .conteneur-fleches {
   z-index: 1000;
@@ -1485,9 +1487,20 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transform: translateY(-50%);
 }
 .carrousel .conteneur-fleches .slide-gauche img, .carrousel .conteneur-fleches .slide-droite img {
   height: 30px;
+}
+.carrousel .conteneur-fleches .slide-gauche {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+}
+.carrousel .conteneur-fleches .slide-droite {
+  position: absolute;
+  top: 50%;
+  right: 10%;
 }
 .carrousel .conteneur-fleches .slide-gauche:hover, .carrousel .conteneur-fleches .slide-droite:hover {
   background-color: #E1003D;
@@ -1498,11 +1511,12 @@ body {
 }
 .carrousel .temoignages {
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .carrousel .temoignage-initial {
   width: 100%;
   transition: 0.8s;
-  transform: translateX(0vw);
 }
 .carrousel .temoignage-initial .carte1 {
   background-color: white;
