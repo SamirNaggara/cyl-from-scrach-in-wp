@@ -41,12 +41,14 @@
             position: absolute;
             top: 50%;
             left: 10%;
+            z-index: 1000;
         }
 
         .slide-droite {
             position: absolute;
             top: 50%;
             right: 10%;
+            z-index: 1000;
         }
 
         .slide-gauche:hover, .slide-droite:hover {
@@ -155,10 +157,10 @@
         // position: absolute;
         // left: 28em;
         // top: 312em;
-        transform: translateX(-100vw);
+        transform: translate(-100vw, -50%);
         width: 100%;
         opacity: 0;
-        transition: 0.3s;
+        transition: 0.8s;
     
         .carte1 {
             background-color: white;
@@ -236,7 +238,7 @@
         // left: 28em;
         // top: 312em;
         width: 100%;
-        transform: translateX(100vw);
+        transform: translate(100vw, -50%);
         opacity: 0;
         transition: 0.8s;
         

@@ -268,10 +268,55 @@ document.addEventListener("DOMContentLoaded", function() {
 //   document.getElementById("carrousel").style.transform = "translateX(-100vw)"
 // }
 
+
   document.getElementById("bouton-gauche").addEventListener("click", gauche);
 
   function gauche() {
     console.log("test");
+
+    var carrousel = document.getElementById("carrousel");
+
+    //Je stock mes cartes dans la variable cartes en lui disant de chercher à partir de mon carrousel
+    var cartes = carrousel.getElementsByClassName("temoignages");
+    console.log(cartes);
+
+    //Je stock mon bouton dans une variable (pourquoi ne marche pas avec carrousel.getElementById ?)
+    var boutonGauche = document.getElementById("bouton-gauche");
+    console.log(boutonGauche);
+
+    var boutonDroit = document.getElementById("bouton-droit");
+    console.log(boutonDroit);
+    
+    console.log(cartes[0]);
+    console.log(cartes[1]);
+    console.log(cartes[2]);
+
+    if (boutonDroit.style.display == 'none') {
+      // console.log("true");
+
+      cartes[1].style.transform = 'translate(-100vw, -50%)';
+      cartes[1].style.opacity = '0';
+      cartes[0].style.transform = 'translate(0vw, -50%)';
+      cartes[0].style.opacity = '1';
+      boutonDroit.style.display = '';
+
+    } else {
+      cartes[0].style.transform = 'translate(-100vw, -50%)';
+      cartes[0].style.opacity = '0';
+  
+      cartes[2].style.transform = 'translate(0vw, -50%)';
+      cartes[2].style.opacity = '1';
+  
+      console.log(cartes[0]);
+      console.log(cartes[1]);
+      console.log(cartes[2]);
+  
+      boutonGauche.style.display = 'none';
+    }
+
+
+
+    // carrousel.getElementById("bouton-gauche").opacity = '0';
 
 
     // ByClassNName = "elements" avec un s
@@ -285,59 +330,59 @@ document.addEventListener("DOMContentLoaded", function() {
     // au début on est au niveau 0, si clique gauche on décrémente de 1, droite on incrémente
     // faire une condition si i = maVariable.length alors display none sur la flèche
 
-    //document. = cherche dans page, techniquement je peux stocker mon carrousel dans une variable et faire
-    // variable.getElements... et ça cherchera uniquement dans mon carrousel
-    var firstCurrent = document.getElementsByClassName("firstCurrent");
-    console.log(firstCurrent[0]);
-    var firstGauche = document.getElementsByClassName("firstGauche");
-    var firstDroite = document.getElementsByClassName("firstDroite");
-    // Je met mes 3 cartes dans des variables grâce à leur ID pour changer leur CSS
-    var current = document.getElementById("current");
-    var gauche = document.getElementById("gauche");
-    var droite = document.getElementById("droite");
-
-    // Déplacement de la carte du milieu + opacité à 0
-    current.style.transform = 'translateX(-100vw)';
-    current.style.opacity = '0';  
-
-    // Déplacement de la carte à droite (au milieu) + opacité à 1
-    droite.style.transform = 'translateX(0)';
-    droite.style.opacity = '1';
-
-    // Déplacement de la carte à gauche (à gauche) son opacité reste à 0
-    gauche.style.transform = 'translateX(100)';
-
-    // On ajoute l'id 'gauche' à la carte mise à gauche, puis on lui retire l'id current
-    // current.setAttribute('id', 'gauche').removeAttribute('id', 'current'); C'est possible ça ??
-    current.setAttribute('id', 'gauche');
-    current.removeAttribute('id', 'current');
-
-    // On ajoute l'id 'current' à la carte mise au milieu, puis on lui retire l'id droite
-    // droite.setAttribute('id', 'current');
-    // droite.removeAttribute('id', 'droite');
-    
-    // On ajoute l'id 'droite' à la carte mise à droite, puis on lui retire l'id gauche
-    // gauche.setAttribute('id', 'droite');
-    // gauche.removeAttribute('id', 'gauche');
-    
-    
-    
-    // if (initial.css.transform) {
-    //   console.log("toutafé");
-    // } else {
-    //   console.log("pas trouvé");
-    // }
-
-
-    // document.getElementsByClassName("temoignage-initial").style.opacity = 'translateX(-100vw)';
-    // document.getElementsByClassName("temoignage3").style.transform = 'translateX(0)';
-
-    // Pas compris pourquoi ça ne fonctionnait pas avec un getelementsbyclassname mais fonctionne avec un queryselector ?
-
-    // document.querySelector(".temoignage-initial").style.transform = 'translateX(-100vw)';
-    // document.querySelector(".temoignage3").style.transform = 'translateX(0)';
-    // document.querySelector(".temoignage3").style.opacity = '1';
-    // document.querySelector(".temoignage-initial").style.opacity = '0';
   }
+
+  document.getElementById("bouton-droit").addEventListener("click", droite);
+
+  function droite() {
+
+    console.log("test");
+
+    var carrousel = document.getElementById("carrousel");
+
+    //Je stock mes cartes dans la variable cartes en lui disant de chercher à partir de mon carrousel
+    var cartes = carrousel.getElementsByClassName("temoignages");
+    console.log(cartes);
+
+    //Je stock mon bouton dans une variable (pourquoi ne marche pas avec carrousel.getElementById ?)
+    var boutonDroit = document.getElementById("bouton-droit");
+    console.log(boutonDroit);
+
+    var boutonGauche = document.getElementById("bouton-gauche");
+    
+    console.log(cartes[0]);
+    console.log(cartes[1]);
+    console.log(cartes[2]);
+
+    if (boutonGauche.style.display == 'none') {
+      // console.log("true");
+
+      cartes[2].style.transform = 'translate(100vw, -50%)';
+      cartes[2].style.opacity = '0';
+      cartes[0].style.transform = 'translate(0vw, -50%)';
+      cartes[0].style.opacity = '1';
+      boutonGauche.style.display = '';
+
+    } else {
+      console.log("false");
+      cartes[0].style.transform = 'translate(100vw, -50%)';
+      cartes[0].style.opacity = '0';
+  
+      cartes[1].style.transform = 'translate(0vw, -50%)';
+      cartes[1].style.opacity = '1';
+  
+      console.log(cartes[0]);
+      console.log(cartes[1]);
+      console.log(cartes[2]);
+  
+      boutonDroit.style.display = 'none';
+    }
+
+
+
+
+  }
+
+
 
 });

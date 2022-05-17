@@ -1496,11 +1496,13 @@ body {
   position: absolute;
   top: 50%;
   left: 10%;
+  z-index: 1000;
 }
 .carrousel .conteneur-fleches .slide-droite {
   position: absolute;
   top: 50%;
   right: 10%;
+  z-index: 1000;
 }
 .carrousel .conteneur-fleches .slide-gauche:hover, .carrousel .conteneur-fleches .slide-droite:hover {
   background-color: #E1003D;
@@ -1572,10 +1574,10 @@ body {
   margin-left: 15px;
 }
 .carrousel .temoignage2 {
-  transform: translateX(-100vw);
+  transform: translate(-100vw, -50%);
   width: 100%;
   opacity: 0;
-  transition: 0.3s;
+  transition: 0.8s;
 }
 .carrousel .temoignage2 .carte1 {
   background-color: white;
@@ -1632,7 +1634,7 @@ body {
 }
 .carrousel .temoignage3 {
   width: 100%;
-  transform: translateX(100vw);
+  transform: translate(100vw, -50%);
   opacity: 0;
   transition: 0.8s;
 }
