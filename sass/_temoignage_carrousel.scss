@@ -37,6 +37,10 @@
             }
         }
 
+        .slide-gauche, .slide-droite:hover {
+            cursor: pointer;
+        }
+
         .slide-gauche {
             position: absolute;
             top: 50%;

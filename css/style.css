@@ -1492,6 +1492,9 @@ body {
 .carrousel .conteneur-fleches .slide-gauche img, .carrousel .conteneur-fleches .slide-droite img {
   height: 30px;
 }
+.carrousel .conteneur-fleches .slide-gauche, .carrousel .conteneur-fleches .slide-droite:hover {
+  cursor: pointer;
+}
 .carrousel .conteneur-fleches .slide-gauche {
   position: absolute;
   top: 50%;

@@ -294,18 +294,18 @@ document.addEventListener("DOMContentLoaded", function() {
     if (boutonDroit.style.display == 'none') {
       // console.log("true");
 
-      cartes[1].style.transform = 'translate(-100vw, -50%)';
-      cartes[1].style.opacity = '0';
+      cartes[2].style.transform = 'translate(100vw, -50%)';
+      cartes[2].style.opacity = '0';
       cartes[0].style.transform = 'translate(0vw, -50%)';
       cartes[0].style.opacity = '1';
       boutonDroit.style.display = '';
 
     } else {
-      cartes[0].style.transform = 'translate(-100vw, -50%)';
+      cartes[0].style.transform = 'translate(100vw, -50%)';
       cartes[0].style.opacity = '0';
   
-      cartes[2].style.transform = 'translate(0vw, -50%)';
-      cartes[2].style.opacity = '1';
+      cartes[1].style.transform = 'translate(0vw, -50%)';
+      cartes[1].style.opacity = '1';
   
       console.log(cartes[0]);
       console.log(cartes[1]);
@@ -357,19 +357,19 @@ document.addEventListener("DOMContentLoaded", function() {
     if (boutonGauche.style.display == 'none') {
       // console.log("true");
 
-      cartes[2].style.transform = 'translate(100vw, -50%)';
-      cartes[2].style.opacity = '0';
+      cartes[1].style.transform = 'translate(-100vw, -50%)';
+      cartes[1].style.opacity = '0';
       cartes[0].style.transform = 'translate(0vw, -50%)';
       cartes[0].style.opacity = '1';
       boutonGauche.style.display = '';
 
     } else {
       console.log("false");
-      cartes[0].style.transform = 'translate(100vw, -50%)';
+      cartes[0].style.transform = 'translate(-100vw, -50%)';
       cartes[0].style.opacity = '0';
   
-      cartes[1].style.transform = 'translate(0vw, -50%)';
-      cartes[1].style.opacity = '1';
+      cartes[2].style.transform = 'translate(0vw, -50%)';
+      cartes[2].style.opacity = '1';
   
       console.log(cartes[0]);
       console.log(cartes[1]);
