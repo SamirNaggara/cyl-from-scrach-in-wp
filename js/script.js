@@ -259,128 +259,90 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // CARROUSEL
 
+ // Cette variable sera mis a jour a chaque changement de temoignange
+  let positionSlide = 0;
 
-// document.getElementById("bouton-gauche").addEventListener("click", gauche);
-// document.getElementById("bouton-droit").addEventListener("click", droit);
+  //Je stock mes cartes dans la variable cartes en lui disant de chercher à partir de mon carrousel
+  var carrousel = document.getElementById("carrousel");
+  var cartes = carrousel.getElementsByClassName("temoignages");
+  console.log(cartes);
 
-// function gauche() {
-//   console.log("test");
-//   document.getElementById("carrousel").style.transform = "translateX(-100vw)"
-// }
+  var boutonGauche = document.getElementById("bouton-gauche")
+  var boutonDroit = document.getElementById("bouton-droit")
 
 
-  document.getElementById("bouton-gauche").addEventListener("click", gauche);
+
+  boutonGauche.addEventListener("click", gauche);
+  boutonDroit.addEventListener("click", droite);
 
   function gauche() {
-    console.log("test");
+    positionSlide-- // La position decremente de 1
 
-    var carrousel = document.getElementById("carrousel");
-
-    //Je stock mes cartes dans la variable cartes en lui disant de chercher à partir de mon carrousel
-    var cartes = carrousel.getElementsByClassName("temoignages");
-    console.log(cartes);
-
-    //Je stock mon bouton dans une variable (pourquoi ne marche pas avec carrousel.getElementById ?)
-    var boutonGauche = document.getElementById("bouton-gauche");
-    console.log(boutonGauche);
-
-    var boutonDroit = document.getElementById("bouton-droit");
-    console.log(boutonDroit);
     
-    console.log(cartes[0]);
-    console.log(cartes[1]);
-    console.log(cartes[2]);
-
-    if (boutonDroit.style.display == 'none') {
-      // console.log("true");
-
-      cartes[2].style.transform = 'translate(100vw, -50%)';
-      cartes[2].style.opacity = '0';
-      cartes[0].style.transform = 'translate(0vw, -50%)';
-      cartes[0].style.opacity = '1';
-      boutonDroit.style.display = '';
-
-    } else {
-      cartes[0].style.transform = 'translate(100vw, -50%)';
-      cartes[0].style.opacity = '0';
-  
-      cartes[1].style.transform = 'translate(0vw, -50%)';
-      cartes[1].style.opacity = '1';
-  
-      console.log(cartes[0]);
-      console.log(cartes[1]);
-      console.log(cartes[2]);
-  
-      boutonGauche.style.display = 'none';
+    if (positionSlide == 0){ // A 0, on centre sur 0
+      centreCarte0()
     }
 
+    if (positionSlide == 1){ // A 1, on centre sur 1
+      centreCarte1()
+    }
+  }
 
 
-    // carrousel.getElementById("bouton-gauche").opacity = '0';
+  function droite() {
+    positionSlide++ // La position increment de 1
 
+    if (positionSlide == 1){ // A 1, on centre sur 1
+      centreCarte1()
 
-    // ByClassNName = "elements" avec un s
+    }
 
-    // getby class sur toutes mes cartes et les stocker dans un éléments
-    // ex = firstcurrent[0], puis [1], puis [2]
-    // il reste indice 0 quand tu le bouge donc tu peux faire bouger comme tu veux
+    if (positionSlide == 2){ // A 2, on centre sur 2
+      centreCarte2()
+    }
+  }
 
-    //faire disparaitre flèche gauche quand on est au bout, puis flèche droite aussi quand bout de droite
+  // En 0, la carte 0 est visible et centre, les autres sont decalé à droite, le bouton gauche est invisible
+  function centreCarte0(){ 
+    cartes[0].style.transform = 'translate(0, -50%)';
+    cartes[1].style.transform = 'translate(100vw, -50%)';
+    cartes[2].style.transform = 'translate(200vw, -50%)';
 
-    // au début on est au niveau 0, si clique gauche on décrémente de 1, droite on incrémente
-    // faire une condition si i = maVariable.length alors display none sur la flèche
+    cartes[0].style.opacity = '1';
+    cartes[1].style.opacity = '0';
+    cartes[2].style.opacity = '0';
+
+    boutonDroit.style.display = "block"
+    boutonGauche.style.display = "none"
 
   }
 
-  document.getElementById("bouton-droit").addEventListener("click", droite);
+    // En 1, la carte 1 est visible et centre, les autres sont de part et d'autres, les 2 boutons sont visibles
+  function centreCarte1(){
+    cartes[0].style.transform = 'translate(-100vw, -50%)';
+    cartes[1].style.transform = 'translate(0, -50%)';
+    cartes[2].style.transform = 'translate(100vw, -50%)';
 
-  function droite() {
+    cartes[0].style.opacity = '0';
+    cartes[1].style.opacity = '1';
+    cartes[2].style.opacity = '0';
 
-    console.log("test");
+    boutonDroit.style.display = "block"
+    boutonGauche.style.display = "block"
+  }
 
-    var carrousel = document.getElementById("carrousel");
+  // En 2, la carte 2 est visible et centre, les autres sont decalé à gauche, le bouton droit est invisible
+  function centreCarte2(){
+    cartes[0].style.transform = 'translate(-200vw, -50%)';
+    cartes[1].style.transform = 'translate(-100vw, -50%)';
+    cartes[2].style.transform = 'translate(0, -50%)';
 
-    //Je stock mes cartes dans la variable cartes en lui disant de chercher à partir de mon carrousel
-    var cartes = carrousel.getElementsByClassName("temoignages");
-    console.log(cartes);
+    cartes[0].style.opacity = '0';
+    cartes[1].style.opacity = '0';
+    cartes[2].style.opacity = '1';
 
-    //Je stock mon bouton dans une variable (pourquoi ne marche pas avec carrousel.getElementById ?)
-    var boutonDroit = document.getElementById("bouton-droit");
-    console.log(boutonDroit);
-
-    var boutonGauche = document.getElementById("bouton-gauche");
-    
-    console.log(cartes[0]);
-    console.log(cartes[1]);
-    console.log(cartes[2]);
-
-    if (boutonGauche.style.display == 'none') {
-      // console.log("true");
-
-      cartes[1].style.transform = 'translate(-100vw, -50%)';
-      cartes[1].style.opacity = '0';
-      cartes[0].style.transform = 'translate(0vw, -50%)';
-      cartes[0].style.opacity = '1';
-      boutonGauche.style.display = '';
-
-    } else {
-      console.log("false");
-      cartes[0].style.transform = 'translate(-100vw, -50%)';
-      cartes[0].style.opacity = '0';
-  
-      cartes[2].style.transform = 'translate(0vw, -50%)';
-      cartes[2].style.opacity = '1';
-  
-      console.log(cartes[0]);
-      console.log(cartes[1]);
-      console.log(cartes[2]);
-  
-      boutonDroit.style.display = 'none';
-    }
-
-
-
-
+    boutonDroit.style.display = "none"
+    boutonGauche.style.display = "block"
   }
 
 
