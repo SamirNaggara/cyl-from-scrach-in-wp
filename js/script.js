@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     // function([string1, string2],target id,[color1,color2])    
-    consoleText(['mais tu ne sais pas quelle formation choisir ?', 'mais est-ce fait pour toi ?', 'mais tu as peur de te lancer ?'], 'text',['pink','rebeccapurple','lightblue']);
+    consoleText(['mais tu ne sais pas quelle formation choisir ?', 'mais tu n\'es pas sur que tu vas aimer ?', 'mais tu as peur de te lancer ?'], 'text',['pink','rebeccapurple','lightblue']);
 
     function consoleText(words, id, colors) {
     if (colors === undefined) colors = ['#fff'];
@@ -209,131 +209,179 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var containerCard = document.querySelectorAll('.formations article');
     
-for(i = 0; i < containerCard.length; i++){
+  for(i = 0; i < containerCard.length; i++){
 
-    let button = containerCard[i].querySelector(".circle-button")
-    let middleCard = containerCard[i].querySelector(".card-middle")
-    let croix = containerCard[i].querySelector(".close")
-    
-  button.addEventListener('click', function(event){
-    
-    event.preventDefault();
-
-    // var container = document.getElementById(this.dataset.container);
-
-    if (!middleCard.classList.contains('active')) {
-        console.log(button);
-        middleCard.classList.add('active');
-        // middleCard.style.height = 'auto';
-        middleCard.style.maxHeight = '300px';
-        // middleCard.style.padding = '30px';
-
-        croix.classList.toggle('closeRotate');
-
-      var height = middleCard.clientHeight + 'px';
-
-    //   middleCard.style.height = '0px';
-
-      setTimeout(function () {
-        // middleCard.style.height = height;
-      }, 0);
+      let button = containerCard[i].querySelector(".circle-button")
+      let middleCard = containerCard[i].querySelector(".card-middle")
+      let croix = containerCard[i].querySelector(".close")
       
+    button.addEventListener('click', function(event){
       
-      
-    } else {
-      
-        middleCard.style.maxHeight = '0px';
-        // middleCard.style.padding = '0px';
-        croix.classList.toggle('closeRotate');
+      event.preventDefault();
 
-   
-        middleCard.classList.remove('active');
+      // var container = document.getElementById(this.dataset.container);
 
-      
-    }
-    
-  });
+      if (!middleCard.classList.contains('active')) {
+          console.log(button);
+          middleCard.classList.add('active');
+          // middleCard.style.height = 'auto';
+          middleCard.style.maxHeight = '300px';
+          // middleCard.style.padding = '30px';
 
-}
+          croix.classList.toggle('closeRotate');
 
+        var height = middleCard.clientHeight + 'px';
 
-// Pour les accordeons
+      //   middleCard.style.height = '0px';
 
-
-  let titre = document.querySelectorAll('.accordion-item .heading')
-
-  console.log(titre)
-
-
-  titre.forEach(element => {
-      // Faire la liste des autres elements de titre
-      // titreCopy = [...titre]
-      // const indexCetElement = titreCopy.indexOf(5);
-      // if (indexCetElement > -1) {
-      //   array.splice(indexCetElement, 1); // 2nd parameter means remove one item only
-      // }
-
-      // console.log(titreCopy)
-       
-
-    element.addEventListener('click', function(e) {
-      e.preventDefault();
-      // console.log("je me declenche")
-      // console.log("C'est this : "+this)
-      let accordeonItem = element.closest(".accordion-item") 
-      // console.log("C'est l'accordeon item : "+accordeonItem)
-      let content = accordeonItem.getElementsByClassName("content")[0];
-      // console.log("C'est le content: "+content)
-
-
-    
-   
-
-      // Add the correct active class
-      if(accordeonItem.classList.contains('active')) {
-          // Remove active classes
-          accordeonItem.classList.remove('active');
-
-          // content.style.display = "none";
-          content.style.maxHeight = "0";
-
-
+        setTimeout(function () {
+          // middleCard.style.height = height;
+        }, 0);
+        
+        
+        
       } else {
-          titre.forEach(unContenu => {
-            let accordeonItem2 = unContenu.closest(".accordion-item") 
-          let content2 = accordeonItem2.getElementsByClassName("content")[0];
+        
+          middleCard.style.maxHeight = '0px';
+          // middleCard.style.padding = '0px';
+          croix.classList.toggle('closeRotate');
+
     
-            if(accordeonItem2.classList.contains('active')) {
-              accordeonItem2.classList.remove('active')
-              content2.style.maxHeight = "0"
-            }
-          })
+          middleCard.classList.remove('active');
 
-
-          // Remove active classes
-          accordeonItem.classList.remove('active');
-  
-          // Add the active class
-          accordeonItem.classList.add('active');
-
-          // content.style.display = "block";
-          content.style.maxHeight = "200px";
-
-
-          // On veut fermer tout les autres
-          
-
+        
       }
-  
-      // Show the content
       
-      // $content.slideToggle(100);
-      // document.querySelector('.accordion-item .content').not(content).slideUp('fast');
     });
 
-});
+  }
 
+
+// CARROUSEL
+
+
+// document.getElementById("bouton-gauche").addEventListener("click", gauche);
+// document.getElementById("bouton-droit").addEventListener("click", droit);
+
+// function gauche() {
+//   console.log("test");
+//   document.getElementById("carrousel").style.transform = "translateX(-100vw)"
+// }
+
+
+  document.getElementById("bouton-gauche").addEventListener("click", gauche);
+
+  function gauche() {
+    console.log("test");
+
+    var carrousel = document.getElementById("carrousel");
+
+    //Je stock mes cartes dans la variable cartes en lui disant de chercher à partir de mon carrousel
+    var cartes = carrousel.getElementsByClassName("temoignages");
+    console.log(cartes);
+
+    //Je stock mon bouton dans une variable (pourquoi ne marche pas avec carrousel.getElementById ?)
+    var boutonGauche = document.getElementById("bouton-gauche");
+    console.log(boutonGauche);
+
+    var boutonDroit = document.getElementById("bouton-droit");
+    console.log(boutonDroit);
+    
+    console.log(cartes[0]);
+    console.log(cartes[1]);
+    console.log(cartes[2]);
+
+    if (boutonDroit.style.display == 'none') {
+      // console.log("true");
+
+      cartes[2].style.transform = 'translate(100vw, -50%)';
+      cartes[2].style.opacity = '0';
+      cartes[0].style.transform = 'translate(0vw, -50%)';
+      cartes[0].style.opacity = '1';
+      boutonDroit.style.display = '';
+
+    } else {
+      cartes[0].style.transform = 'translate(100vw, -50%)';
+      cartes[0].style.opacity = '0';
   
+      cartes[1].style.transform = 'translate(0vw, -50%)';
+      cartes[1].style.opacity = '1';
+  
+      console.log(cartes[0]);
+      console.log(cartes[1]);
+      console.log(cartes[2]);
+  
+      boutonGauche.style.display = 'none';
+    }
+
+
+
+    // carrousel.getElementById("bouton-gauche").opacity = '0';
+
+
+    // ByClassNName = "elements" avec un s
+
+    // getby class sur toutes mes cartes et les stocker dans un éléments
+    // ex = firstcurrent[0], puis [1], puis [2]
+    // il reste indice 0 quand tu le bouge donc tu peux faire bouger comme tu veux
+
+    //faire disparaitre flèche gauche quand on est au bout, puis flèche droite aussi quand bout de droite
+
+    // au début on est au niveau 0, si clique gauche on décrémente de 1, droite on incrémente
+    // faire une condition si i = maVariable.length alors display none sur la flèche
+
+  }
+
+  document.getElementById("bouton-droit").addEventListener("click", droite);
+
+  function droite() {
+
+    console.log("test");
+
+    var carrousel = document.getElementById("carrousel");
+
+    //Je stock mes cartes dans la variable cartes en lui disant de chercher à partir de mon carrousel
+    var cartes = carrousel.getElementsByClassName("temoignages");
+    console.log(cartes);
+
+    //Je stock mon bouton dans une variable (pourquoi ne marche pas avec carrousel.getElementById ?)
+    var boutonDroit = document.getElementById("bouton-droit");
+    console.log(boutonDroit);
+
+    var boutonGauche = document.getElementById("bouton-gauche");
+    
+    console.log(cartes[0]);
+    console.log(cartes[1]);
+    console.log(cartes[2]);
+
+    if (boutonGauche.style.display == 'none') {
+      // console.log("true");
+
+      cartes[1].style.transform = 'translate(-100vw, -50%)';
+      cartes[1].style.opacity = '0';
+      cartes[0].style.transform = 'translate(0vw, -50%)';
+      cartes[0].style.opacity = '1';
+      boutonGauche.style.display = '';
+
+    } else {
+      console.log("false");
+      cartes[0].style.transform = 'translate(-100vw, -50%)';
+      cartes[0].style.opacity = '0';
+  
+      cartes[2].style.transform = 'translate(0vw, -50%)';
+      cartes[2].style.opacity = '1';
+  
+      console.log(cartes[0]);
+      console.log(cartes[1]);
+      console.log(cartes[2]);
+  
+      boutonDroit.style.display = 'none';
+    }
+
+
+
+
+  }
 
 
 
