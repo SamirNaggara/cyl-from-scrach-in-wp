@@ -611,7 +611,6 @@ section.bloc-cta-html {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Montserrat";
   font-size: 30px;
   position: relative;
 }
@@ -624,6 +623,7 @@ section.bloc-cta-html .conteneurBloc h2 {
   text-align: center;
   margin: 32px 0;
   font-weight: bold;
+  font-size: 50px;
 }
 section.bloc-cta-html .conteneurBloc p {
   line-height: 45px;
@@ -648,7 +648,6 @@ section.bloc-cta-html .conteneurBloc .conteneur-boutons a {
 }
 
 .bloc-cta-html code, .bloc-cta-html .card-code .line-numbers, .card-code .bloc-cta-html .line-numbers {
-  font-family: "Lucida Console", Monaco, monospace;
   font-size: 14px;
 }
 .bloc-cta-html code .cta, .bloc-cta-html .card-code .line-numbers .cta, .card-code .bloc-cta-html .line-numbers .cta {
@@ -674,6 +673,10 @@ section.bloc-cta-html .conteneurBloc .conteneur-boutons a {
 }
 .bloc-cta-html code .cta a:last-child, .bloc-cta-html .card-code .line-numbers .cta a:last-child, .card-code .bloc-cta-html .line-numbers .cta a:last-child {
   background-color: #23c186;
+}
+
+.text2 {
+  color: white !important;
 }
 
 .card-code {
@@ -1249,7 +1252,7 @@ body {
   text-align: center;
   padding-top: 120px;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 50px;
   margin-bottom: 30px;
 }
 .formations .conteneur {
@@ -1421,7 +1424,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-family: graphik;
+  font-family: "poppins";
 }
 .contact .conteneur {
   display: flex;
@@ -1435,7 +1438,7 @@ body {
   font-size: 40px;
   font-weight: bold;
   margin-bottom: 80px;
-  font-family: graphik;
+  font-family: "poppins";
   text-align: center;
 }
 .contact .conteneur form {
@@ -1448,7 +1451,7 @@ body {
   font-size: 22px;
   padding-bottom: 8px;
   margin-top: 20px;
-  font-family: graphik;
+  font-family: "poppins";
 }
 .contact .conteneur form input[type=email] {
   width: 100%;
@@ -1472,7 +1475,7 @@ body {
   line-height: 1;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  font-family: graphik;
+  font-family: "poppins";
 }
 .contact .conteneur form input[type=email]:hover:not(:focus) {
   box-shadow: inset 0 0 0 1px #aab5c5;
@@ -1501,26 +1504,31 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
-  font-family: graphik;
+  font-family: "poppins";
 }
 .contact .conteneur form textarea:focus {
   box-shadow: inset 0 0 0 1px #1fb6ff;
 }
 .contact .conteneur form input[type=submit] {
-  font-size: 15px;
+  font-size: 20px;
   width: 100%;
   margin-top: 40px;
-  padding: 16px 0;
+  padding: 8px 0;
   border: none;
   color: white;
   font-weight: bold;
-  font-family: graphik;
+  font-family: "poppins";
 }
 
 .carrousel {
   transition: 3s;
   position: relative;
   overflow: hidden;
+}
+.carrousel h2 {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 120px;
 }
 .carrousel .conteneur-fleches {
   z-index: 1000;

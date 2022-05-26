@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
    
-    font-family: graphik;
+    font-family: "poppins";
 
     .conteneur{
         display: flex;
@@ -17,7 +17,8 @@
             font-size: 40px;
             font-weight: bold;
             margin-bottom: 80px;
-            font-family: graphik;
+            font-family: "poppins";
+
             text-align: center;
 
 
@@ -33,7 +34,8 @@
                 font-size: 22px;
                 padding-bottom: 8px;
                 margin-top: 20px;
-                font-family: graphik;
+                font-family: "poppins";
+
 
             }
 
@@ -59,8 +61,7 @@
                 line-height: 1;
                 text-rendering: optimizeLegibility;
                 -webkit-font-smoothing: antialiased;
-                font-family: graphik;
-
+                font-family: "poppins";
 
 
                 &:hover:not(:focus){
@@ -94,9 +95,8 @@
                 text-rendering: optimizeLegibility;
                 -webkit-font-smoothing: antialiased;
                 box-sizing: border-box;
-                font-family: graphik;
+                font-family: "poppins";
 
-         
             
 
 
@@ -106,14 +106,14 @@
             }
 
             input[type="submit"]{
-                font-size: 15px;
+                font-size: 20px;
                 width: 100%;
                 margin-top: 40px;
-                padding: 16px 0;
+                padding: 8px 0;
                 border: none;
                 color: white;
                 font-weight: bold;
-                font-family: graphik;
+                font-family: "poppins";
 
             }
         }
