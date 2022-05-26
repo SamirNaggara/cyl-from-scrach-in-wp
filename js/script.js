@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     // function([string1, string2],target id,[color1,color2])    
-    consoleText(['mais tu ne sais pas quelle formation choisir ?', 'mais est-ce fait pour toi ?', 'mais tu as peur de te lancer ?'], 'text',['pink','rebeccapurple','lightblue']);
+    consoleText(['mais tu ne sais pas quelle formation choisir ?', 'mais tu n\'es pas sur que tu vas aimer ?', 'mais tu as peur de te lancer ?'], 'text',['pink','rebeccapurple','lightblue']);
 
     function consoleText(words, id, colors) {
     if (colors === undefined) colors = ['#fff'];
@@ -209,55 +209,145 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var containerCard = document.querySelectorAll('.formations article');
     
-for(i = 0; i < containerCard.length; i++){
+  for(i = 0; i < containerCard.length; i++){
 
-    let button = containerCard[i].querySelector(".circle-button")
-    let middleCard = containerCard[i].querySelector(".card-middle")
-    let croix = containerCard[i].querySelector(".close")
+      let button = containerCard[i].querySelector(".circle-button")
+      let middleCard = containerCard[i].querySelector(".card-middle")
+      let croix = containerCard[i].querySelector(".close")
+      
+    button.addEventListener('click', function(event){
+      
+      event.preventDefault();
+
+      // var container = document.getElementById(this.dataset.container);
+
+      if (!middleCard.classList.contains('active')) {
+          console.log(button);
+          middleCard.classList.add('active');
+          // middleCard.style.height = 'auto';
+          middleCard.style.maxHeight = '300px';
+          // middleCard.style.padding = '30px';
+
+          croix.classList.toggle('closeRotate');
+
+        var height = middleCard.clientHeight + 'px';
+
+      //   middleCard.style.height = '0px';
+
+        setTimeout(function () {
+          // middleCard.style.height = height;
+        }, 0);
+        
+        
+        
+      } else {
+        
+          middleCard.style.maxHeight = '0px';
+          // middleCard.style.padding = '0px';
+          croix.classList.toggle('closeRotate');
+
     
-  button.addEventListener('click', function(event){
+          middleCard.classList.remove('active');
+
+        
+      }
+      
+    });
+
+  }
+
+
+// CARROUSEL
+
+ // Cette variable sera mis a jour a chaque changement de temoignange
+  let positionSlide = 0;
+
+  //Je stock mes cartes dans la variable cartes en lui disant de chercher à partir de mon carrousel
+  var carrousel = document.getElementById("carrousel");
+  var cartes = carrousel.getElementsByClassName("temoignages");
+  console.log(cartes);
+
+  var boutonGauche = document.getElementById("bouton-gauche")
+  var boutonDroit = document.getElementById("bouton-droit")
+
+
+
+  boutonGauche.addEventListener("click", gauche);
+  boutonDroit.addEventListener("click", droite);
+
+  function gauche() {
+    positionSlide-- // La position decremente de 1
+
     
-    event.preventDefault();
-
-    // var container = document.getElementById(this.dataset.container);
-
-    if (!middleCard.classList.contains('active')) {
-        console.log(button);
-        middleCard.classList.add('active');
-        // middleCard.style.height = 'auto';
-        middleCard.style.maxHeight = '300px';
-        // middleCard.style.padding = '30px';
-
-        croix.classList.toggle('closeRotate');
-
-      var height = middleCard.clientHeight + 'px';
-
-    //   middleCard.style.height = '0px';
-
-      setTimeout(function () {
-        // middleCard.style.height = height;
-      }, 0);
-      
-      
-      
-    } else {
-      
-        middleCard.style.maxHeight = '0px';
-        // middleCard.style.padding = '0px';
-        croix.classList.toggle('closeRotate');
-
-   
-        middleCard.classList.remove('active');
-
-      
+    if (positionSlide == 0){ // A 0, on centre sur 0
+      centreCarte0()
     }
-    
-  });
 
-}
+    if (positionSlide == 1){ // A 1, on centre sur 1
+      centreCarte1()
+    }
+  }
 
 
-// Pour les accordeons
+  function droite() {
+    positionSlide++ // La position increment de 1
+
+    if (positionSlide == 1){ // A 1, on centre sur 1
+      centreCarte1()
+
+    }
+
+    if (positionSlide == 2){ // A 2, on centre sur 2
+      centreCarte2()
+    }
+  }
+
+  // En 0, la carte 0 est visible et centre, les autres sont decalé à droite, le bouton gauche est invisible
+  function centreCarte0(){ 
+    cartes[0].style.transform = 'translate(0, -50%)';
+    cartes[1].style.transform = 'translate(100vw, -50%)';
+    cartes[2].style.transform = 'translate(200vw, -50%)';
+
+    cartes[0].style.opacity = '1';
+    cartes[1].style.opacity = '0';
+    cartes[2].style.opacity = '0';
+
+    boutonDroit.style.display = "block"
+    boutonGauche.style.display = "none"
+
+  }
+
+    // En 1, la carte 1 est visible et centre, les autres sont de part et d'autres, les 2 boutons sont visibles
+  function centreCarte1(){
+    cartes[0].style.transform = 'translate(-100vw, -50%)';
+    cartes[1].style.transform = 'translate(0, -50%)';
+    cartes[2].style.transform = 'translate(100vw, -50%)';
+
+    cartes[0].style.opacity = '0';
+    cartes[1].style.opacity = '1';
+    cartes[2].style.opacity = '0';
+
+    boutonDroit.style.display = "block"
+    boutonGauche.style.display = "block"
+  }
+
+  // En 2, la carte 2 est visible et centre, les autres sont decalé à gauche, le bouton droit est invisible
+  function centreCarte2(){
+    cartes[0].style.transform = 'translate(-200vw, -50%)';
+    cartes[1].style.transform = 'translate(-100vw, -50%)';
+    cartes[2].style.transform = 'translate(0, -50%)';
+
+    cartes[0].style.opacity = '0';
+    cartes[1].style.opacity = '0';
+    cartes[2].style.opacity = '1';
+
+    boutonDroit.style.display = "none"
+    boutonGauche.style.display = "block"
+  }
+
+
+
+  // Pour les accordeons
 
 
   let titre = document.querySelectorAll('.accordion-item .heading')
@@ -332,8 +422,6 @@ for(i = 0; i < containerCard.length; i++){
     });
 
 });
-
-  
 
 
 

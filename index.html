@@ -12,7 +12,7 @@
         <link href="css/style.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Khula:wght@700&family=Montserrat:wght@300&family=Poppins:wght@600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
     </head>
     <body>
         <div class="conteneurMenu">
@@ -160,7 +160,7 @@
                             <div class="face face1">
                                 <div class="content la-pratique">
                                     <span class="stars"></span>
-                                    <h4>Commencer la pratique</h4>
+                                    <h4>Pour commencer la pratique</h4>
                                     <p>Au final, la seule voie pour devenir développeur, c’est de coder !
 
                                         Commence des aujourd’hui !
@@ -177,9 +177,8 @@
                             <div class="face face1">
                                 <div class="content comment-apprendre">
                                     <span class="stars"></span>
-                                    <h4>Comment apprendre ?</h4>
-                                    <p>Auto-didacte ? Ecole d’informatique ? Formation en ligne ou bootcamp ?
-                                    Il existe pleins de façon d’apprendre, découvre les !</p>
+                                    <h4>Pour t'aider à t'orienter</h4>
+                                    <p>Que on veut devenir developpeur, on ne sait pas par quoi commencer, ou quelles sont les bonnes décisions à prendre</p>
                                     <a href="#">Voir la formation gratuite</a>
                                 </div>
                             </div>
@@ -192,7 +191,7 @@
                             <div class="face face1">
                                 <div class="content pour-coder">
                                     <span class="stars"></span>
-                                    <h4>Etes vous fait pour coder ?</h4>
+                                    <h4>Pour découvrir votre passion </h4>
                                     <p>Pour être bon développeur, il faut aimer coder.
                                     Allez vous aimer, ou détester ?
                                     La seule façon de savoir, c’est d’essayer !</p>
@@ -358,6 +357,100 @@
                     </article>
                 </div>
             </section>
+
+
+            
+            <section class="carrousel" id="carrousel">
+                <div class="conteneur-fleches">
+                    <button class="slide-gauche" id="bouton-gauche">
+                        <img src="./images/left-arrow.png" alt="">
+                    </button>
+                    <button class="slide-droite" id="bouton-droit">
+                        <img src="./images/right-arrow.png" alt="">
+    
+                    </button>
+                </div>
+                <div class="temoignage-initial temoignages firstCurrent" id="current">
+                    <article class="carte1">
+                        <div class="row">
+                            <div class="column-gauche">
+                                <div class="gauche">
+                                    <div class="photo">
+                                        <img src="./images/portrait.png" alt="photo témoignage Sophie">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column-droite">
+                                <div class="droite">
+                                    <div class="nom-temoignage">
+                                        <span class="nom">Sophie,</span>
+                                        <span class="location-temoignage">Holberton School San Francisco, Cohort 1</span>
+                                    </div>
+                                    <div class="texte-temoignage">
+                                        "To me, one of the most valuable things from the program are the peers! That's what makes it so unique. How closely and intensely you work with others, that's one of the best resources. The curriculum is awesome, the problems are great, and the real magic comes from working together on them."
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="temoignages temoignage2 firstGauche" id="gauche">
+                    <article class="carte1">
+                        <div class="row">
+                            <div class="column-gauche">
+                                <div class="gauche">
+                                    <div class="photo">
+                                        <img src="./images/portrait.png" alt="photo témoignage Sophie">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column-droite">
+                                <div class="droite">
+                                    <div class="nom-temoignage">
+                                        <span class="nom">Sonia,</span>
+                                        <span class="location-temoignage">Holberton School San Francisco, Cohort 2</span>
+                                    </div>
+                                    <div class="texte-temoignage">
+                                        "To me, one of the most valuable things from the program are the peers! That's what makes it so unique. How closely and intensely you work with others, that's one of the best resources. The curriculum is awesome, the problems are great, and the real magic comes from working together on them."
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="temoignages temoignage3 firstDroite" id="droite">
+                    <article class="carte1">
+                        <div class="row">
+                            <div class="column-gauche">
+                                <div class="gauche">
+                                    <div class="photo">
+                                        <img src="./images/portrait.png" alt="photo témoignage Sophie">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column-droite">
+                                <div class="droite">
+                                    <div class="nom-temoignage">
+                                        <span class="nom">Soso,</span>
+                                        <span class="location-temoignage">Holberton School San Francisco, Cohort 3</span>
+                                    </div>
+                                    <div class="texte-temoignage">
+                                        "To me, one of the most valuable things from the program are the peers! That's what makes it so unique. How closely and intensely you work with others, that's one of the best resources. The curriculum is awesome, the problems are great, and the real magic comes from working together on them."
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+
+
+
+
+
             <section class="contact" id="contact">
                 <div class="conteneur">
                     <form action="contact.php" method="post">
@@ -454,7 +547,7 @@
 
 
 
-        <script src="js/script.js"></script>
+        <script src="js/script.js" defer></script>
     </body>
 
 

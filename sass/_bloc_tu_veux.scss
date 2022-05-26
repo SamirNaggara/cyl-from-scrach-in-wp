@@ -195,6 +195,7 @@ $primary-dark: mix(#000000, $primary, 25%);
     max-width: 75rem;
     margin: 0 auto;
     padding: 2rem;
+    box-sizing: border-box;
 }
 
 .accordion-item {

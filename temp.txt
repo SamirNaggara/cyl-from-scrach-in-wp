@@ -1,0 +1,388 @@
+document.getElementById("bouton-gauche").addEventListener("click", gauche);
+
+function gauche() {
+  console.log("test");
+
+
+  var firstCurrent = document.getElementsByClassName("firstCurrent");
+  var firstGauche = document.getElementsByClassName("firstGauche");
+  var firstDroite = document.getElementsByClassName("firstDroite");
+  // Je met mes 3 cartes dans des variables grâce à leur ID pour changer leur CSS
+  var current = document.getElementById("current");
+  var gauche = document.getElementById("gauche");
+  var droite = document.getElementById("droite");
+
+  // Déplacement de la carte du milieu + opacité à 0
+  current.style.transform = 'translateX(-100vw)';
+  current.style.opacity = '0';  
+
+  // Déplacement de la carte à droite (au milieu) + opacité à 1
+  droite.style.transform = 'translateX(0)';
+  droite.style.opacity = '1';
+
+  // Déplacement de la carte à gauche (à gauche) son opacité reste à 0
+  gauche.style.transform = 'translateX(100)';
+
+  // On ajoute l'id 'gauche' à la carte mise à gauche, puis on lui retire l'id current
+
+  // firstCurrent.setAttribute('id', 'gauche');
+
+  // On ajoute l'id 'current' à la carte mise au milieu, puis on lui retire l'id droite
+  // droite.setAttribute('id', 'current');
+  // droite.removeAttribute('id', 'droite');
+  
+  // On ajoute l'id 'droite' à la carte mise à droite, puis on lui retire l'id gauche
+  // gauche.setAttribute('id', 'droite');
+  // gauche.removeAttribute('id', 'gauche');
+  
+  
+  
+  // if (initial.css.transform) {
+  //   console.log("toutafé");
+  // } else {
+  //   console.log("pas trouvé");
+  // }
+
+
+  // document.getElementsByClassName("temoignage-initial").style.opacity = 'translateX(-100vw)';
+  // document.getElementsByClassName("temoignage3").style.transform = 'translateX(0)';
+
+  // Pas compris pourquoi ça ne fonctionnait pas avec un getelementsbyclassname mais fonctionne avec un queryselector ?
+
+  // document.querySelector(".temoignage-initial").style.transform = 'translateX(-100vw)';
+  // document.querySelector(".temoignage3").style.transform = 'translateX(0)';
+  // document.querySelector(".temoignage3").style.opacity = '1';
+  // document.querySelector(".temoignage-initial").style.opacity = '0';
+}
+
+});
+
+
+
+temoignage carrousel : 
+
+
+// FLECHES
+
+.carrousel {
+    transition: 3s;
+    // transform: translateX(-100vw);
+    position: relative;
+    // display: flex;
+    // justify-content: center;
+
+    .conteneur-fleches {
+        z-index: 1000;
+        display: flex;
+        justify-content: space-around;
+        // position: relative;
+        // top: 14em;
+    
+        .slide-gauche, .slide-droite {
+            width: 75px;
+            height: 75px;
+            border: none;
+            background-color: white;
+            box-shadow: 0px 0px 20px -15px #4b4c4b;
+            border-radius: 50px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    
+            img {
+                height: 30px;
+            }
+        }
+
+        .slide-gauche:hover, .slide-droite:hover {
+            background-color: #E1003D;
+            transition: 0.8s;
+
+            img:hover {
+                color: white;
+            }
+        }
+    
+    
+        // .slide-gauche {
+
+        //     // transform: translateX(-100%);
+        //     // left: 25em;
+        // }
+    
+        // .slide-droite {
+        //     // transform: translateX(100%);
+        //     // right: 24em;
+        // }
+    
+        // .slide-gauche, .slide-droite::after {
+        //     content: " ";
+        //     position: absolute;
+        //     width: 75px;
+        //     height: 75px;
+        //     top: 50%;
+        //     left: 54%;
+        //     transform: translate(-50%, -50%) rotate(135deg);
+        // }
+    
+        // .slide-droite::after {
+        //     left: 47%;
+        //     transform: translate(-50%, -50%) rotate(-45deg);
+        // }
+    }
+    
+    
+    
+    .temoignages {
+        position: absolute;
+        // margin-left: 25vw;
+    }
+    
+    
+    // .temoignage-active {
+    //     opacity: 1;
+    //     position: relative;
+    //     z-index: 900;
+    // }
+    
+    // 1ERE CARTE DE TEMOIGNAGE
+    
+    .temoignage-initial {
+    
+        // position: absolute;
+        // left: 28em;
+        // top: 312em;
+        width: 100%;
+        transition: 0.8s;
+        transform: translateX(0vw);
+
+    
+        .carte1 {
+            background-color: white;
+            width: 60em;
+            margin: 0 auto;
+            padding: 2em;
+            border-radius: 15px;
+            box-shadow: 0px 0px 20px -15px #4b4c4b;
+    
+            .row {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 100%;
+    
+                .column-gauche {
+                    display: flex;
+                    flex-direction: column;
+                    flex-basis: 100%;
+                    flex: 1;
+    
+                    .photo {
+                        text-align: center;
+    
+                        img {
+                            width: 50%;
+                        }
+                    }
+    
+                }
+    
+                .column-droite {
+                    display: flex;
+                    flex-direction: column;
+                    flex-basis: 100%;
+                    flex: 2;
+                    justify-content: center;
+    
+                    .droite {
+                        margin-bottom: 2vh;
+    
+                        .texte-temoignage {
+                            color: grey;
+                            margin-top: 2em;
+                            padding-right: 4em;
+                            text-align: justify;
+                        }
+        
+                        .nom-temoignage {
+                            color: #e1003c;
+                            font-weight: 600;
+                            font-size: 20px;
+                            margin: 1em 0;
+                        }
+        
+                        .location-temoignage {
+                            color: grey;
+                            opacity: 60%;
+                            margin-left: 15px;
+                        }
+                    }
+    
+    
+                }
+            }
+    
+        }
+    }
+    
+    // 2E CARTE DE TEMOIGNAGE
+    
+    .temoignage2 {
+    
+        // position: absolute;
+        // left: 28em;
+        // top: 312em;
+        transform: translateX(-100vw);
+        width: 100%;
+        opacity: 0;
+        transition: 0.3s;
+    
+        .carte1 {
+            background-color: white;
+            width: 60em;
+            margin: 0 auto;
+            padding: 2em;
+            border-radius: 15px;
+            box-shadow: 0px 0px 20px -15px #4b4c4b;
+    
+            .row {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 100%;
+    
+                .column-gauche {
+                    display: flex;
+                    flex-direction: column;
+                    flex-basis: 100%;
+                    flex: 1;
+    
+                    .photo {
+                        text-align: center;
+    
+                        img {
+                            width: 50%;
+                        }
+                    }
+    
+                }
+    
+                .column-droite {
+                    display: flex;
+                    flex-direction: column;
+                    flex-basis: 100%;
+                    flex: 2;
+                    justify-content: center;
+    
+                    .droite {
+                        margin-bottom: 2vh;
+    
+                        .texte-temoignage {
+                            color: grey;
+                            margin-top: 2em;
+                            padding-right: 4em;
+                            text-align: justify;
+                        }
+        
+                        .nom-temoignage {
+                            color: #e1003c;
+                            font-weight: 600;
+                            font-size: 20px;
+                            margin: 1em 0;
+                        }
+        
+                        .location-temoignage {
+                            color: grey;
+                            opacity: 60%;
+                            margin-left: 15px;
+                        }
+                    }
+    
+    
+                }
+            }
+    
+        }
+    }
+    
+    // 3E CARTE DE TEMOIGNAGE
+    
+    .temoignage3 {
+    
+        // position: absolute;
+        // left: 28em;
+        // top: 312em;
+        width: 100%;
+        transform: translateX(100vw);
+        opacity: 0;
+        transition: 0.8s;
+        
+        .carte1 {
+            background-color: white;
+            width: 60em;
+            margin: 0 auto;
+            padding: 2em;
+            border-radius: 15px;
+            box-shadow: 0px 0px 20px -15px #4b4c4b;
+    
+            .row {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 100%;
+    
+                .column-gauche {
+                    display: flex;
+                    flex-direction: column;
+                    flex-basis: 100%;
+                    flex: 1;
+    
+                    .photo {
+                        text-align: center;
+    
+                        img {
+                            width: 50%;
+                        }
+                    }
+    
+                }
+    
+                .column-droite {
+                    display: flex;
+                    flex-direction: column;
+                    flex-basis: 100%;
+                    flex: 2;
+                    justify-content: center;
+    
+                    .droite {
+                        margin-bottom: 2vh;
+    
+                        .texte-temoignage {
+                            color: grey;
+                            margin-top: 2em;
+                            padding-right: 4em;
+                            text-align: justify;
+                        }
+        
+                        .nom-temoignage {
+                            color: #e1003c;
+                            font-weight: 600;
+                            font-size: 20px;
+                            margin: 1em 0;
+                        }
+        
+                        .location-temoignage {
+                            color: grey;
+                            opacity: 60%;
+                            margin-left: 15px;
+                        }
+                    }
+    
+    
+                }
+            }
+    
+        }
+    }
+}
