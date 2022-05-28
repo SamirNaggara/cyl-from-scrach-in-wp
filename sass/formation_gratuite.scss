@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+.mauticform-field-hidden { display:none }
+
 .page-content section.newsletter {
     min-height: 100vh;
     display: flex;
@@ -222,4 +224,19 @@ details[data-popover] {
   .wrapper {
     width: 100%;
     padding: 250px;
+  }
+
+
+  form{
+    .mauticform-innerform{
+        height: 100%;
+
+        .mauticform-page-wrapper{
+            height: 100%;
+
+            .mauticform-email{
+                height: 100%;
+            }
+        }
+    }
   }
