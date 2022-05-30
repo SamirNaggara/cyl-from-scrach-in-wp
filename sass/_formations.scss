@@ -24,7 +24,10 @@ body {
         width: 90%;
         >article{
             width: 350px;
+            
         }
+
+        
 
         .card-title{
             text-align: center;
@@ -84,15 +87,50 @@ body {
 }
 
 
-.html .card-middle a{
-  background-color: #2196f3;
+.html{
+  .card-middle a{
+    background-color: #2196f3;
+  }
+ 
+
+  .card-top{
+    background-image: url("../images/POULPY-HTML.png");
+    background-size: cover;
+    height: 192px;
+  }
+}
+
+.algo{
+  .card-middle a{
+    background-color: #e91e63;
+  }
+ 
+
+  .card-top{
+    background-image: url("../images/POULPY-ALGORYTHMIE.png");
+    background-size: cover;
+    height: 192px;
+  }
+}
+
+.formation-gratuite{
+  .card-middle a{
+    background-color: #23c186;
+  }
+ 
+
+  .card-top{
+    background-image: url("../images/POULPY-ORIENTATION.png");
+    background-size: cover;
+    height: 192px;
+  }
 }
 
 
 
-.algo .card-middle a{
-  background-color: #e91e63;
-}
+
+
+
 
 .formation-gratuite .card-middle a{
   background-color: #23c186;

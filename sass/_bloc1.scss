@@ -16,9 +16,9 @@
 
         .logo{
             width: 30%;
-            background-image: url(../images/mascotte-v1.png);
+            background-image: url("../images/POULPY-INTRO.png");
             background-repeat: no-repeat;
-            background-size: 305px;
+            background-size: 370px;
             background-position: left 85%;
             z-index: 10;
 
@@ -37,7 +37,7 @@
             padding: 0 80px;
 
             .logo{
-                width: 300px;
+                width: 370px;
                 height: 300px;
                 position: absolute;
                 bottom: 50px;
@@ -153,3 +153,6 @@
     fill: white;
     
 }
+
+
+
