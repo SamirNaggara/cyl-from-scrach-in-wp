@@ -1,0 +1,23 @@
+{
+  "name": "codeyourlife",
+  "version": "1.0.0",
+  "description": "Le site from scrach de code your life",
+  "main": "index.html",
+  "scripts": {
+    "test": "\"echo \\\"Ceci est bien la commande test de code your life\\\"",
+    "sass": "sass --watch ./sass/styles.scss:./css/style.css",
+    "sass-compressed": "sass --watch ./sass/styles.scss:./css/style.css --style compressed",
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamirNaggara/cyl-from-scratch.git"
+  },
+  "author": "Samir Naggara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SamirNaggara/cyl-from-scratch/issues"
+  },
+  "homepage": "https://github.com/SamirNaggara/cyl-from-scratch#readme",
+  "browserslist": "last 4 versions"
+}

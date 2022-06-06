@@ -34,7 +34,9 @@
     } else {
       $status = "Une erreur est survenue, votre message n'a pas pu être envoyé." . $br . $br . "Vous pouvez nous contacter directement via contact@codeyourlife.fr !";
     }
-    header( "refresh:7;url=http://localhost/cyl-from-scratch/#formations");
+
+  
+    header( "refresh:7;url=./#formations");
   }
   ?>
   <!DOCTYPE html>
