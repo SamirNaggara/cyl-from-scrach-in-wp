@@ -25,10 +25,15 @@
 
         }
 
+
         p{
             font-size: 24px;
-    line-height: 36px;
+            line-height: 36px;
+            // J'ai rajouté un text align pour la page contact.php, je pense que c'pas déconnant sur la page formation-gratuite aussi non ?
+            text-align: center;
         }
+
+        
 
         .conteneur-popover{
             display: flex;
