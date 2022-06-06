@@ -1,0 +1,35 @@
+.pourquoiHtml{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .conteneurPourquoiHtml{
+        h2{
+            text-align: center;
+            margin: 32px 0;
+            font-weight: bold;
+            font-size: 50px;
+            margin-bottom: 72px;
+        }
+        >div{
+            padding-left: 50%;
+
+            
+
+            h3{
+                margin-top: 24px;
+                font-size:25px;
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+            }
+
+            p{
+                margin-top: 16px;
+                line-height: 22px;
+            }
+        }
+
+        
+    }
+}

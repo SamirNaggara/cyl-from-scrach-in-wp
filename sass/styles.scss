@@ -1,20 +1,21 @@
 
 
-@use 'base';
-@use 'keyframe';
-@use 'navigation';
-@use 'animation_texte';
-@use 'bloc1';
-@use 'bloc_tu_veux';
-@use 'blocPourquoiCyl';
-@use 'bloc_cta_html';
-@use 'animation_pas';
-@use 'modal_formation_gratuite';
-@use 'glitch_animation';
-@use 'formations';
-@use 'contact';
-@use 'temoignage_carrousel';
-
+@use 'page_accueil/base';
+@use 'page_accueil/keyframe';
+@use 'page_accueil/navigation';
+@use 'page_accueil/animation_texte';
+@use 'page_accueil/bloc1';
+@use 'page_accueil/bloc_tu_veux';
+@use 'page_accueil/blocPourquoiCyl';
+@use 'page_accueil/bloc_cta_html';
+@use 'page_accueil/animation_pas';
+@use 'page_accueil/modal_formation_gratuite';
+@use 'page_accueil/glitch_animation';
+@use 'page_accueil/formations';
+@use 'page_accueil/contact';
+@use 'page_accueil/temoignage_carrousel';
+@use 'page-html/premiere_section';
+@use 'page-html/pourquoiHtml';
 
 
 
