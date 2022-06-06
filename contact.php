@@ -10,7 +10,7 @@
   // Le sujet à envoyer à nous-même
   $subjectContact = "Nouvelle demande de contact";
   // Le headers à envoyer à nous-même (qui fait en sorte que cliquer sur "répondre" va envoyer le mail au $dest !!)
-  $headersContact = 'From : ' . $dest . "\r\n" . 'Reply-To : ' . $dest . "\r\n" . 'X-Mailker : PHP/' . phpversion();
+  $headersContact = 'From : ' . $dest . "\r\n" . 'Reply-To : contact@codeyourlife.fr\r\n" . 'X-Mailker : PHP/' . phpversion();
   // Le contenu du mail à envoyer à nous-même
   $bodyContact = "Bonjour, \n Vous avez reçu une nouvelle demande de contact sur coucou.codeyourlife.fr ! \n Demandeur : " . $dest . "\n Message : " . $message;
 
