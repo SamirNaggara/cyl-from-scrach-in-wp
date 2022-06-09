@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
 
+  // Liste des mails refusés lors de la vérification du formulaire de contact :
+  let mailsRefuses = ['@yahoo', '@sfr'];
 
 
 //     $('#circleDrop').click(function(){
@@ -347,15 +349,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Formulaire JS 
 
-  
   document.getElementById("email").addEventListener('change', checkMail);
+
+
   function checkMail() {
-    if (this.value.includes("@sfr") ||  this.value.includes("@yahoo")){
-      document.getElementById("error-mail").style.display = "block";
-      document.getElementById("input-formulaire").style.display="none";
-    } else {
-      document.getElementById("error-mail").style.display = "none";
-      document.getElementById("input-formulaire").style.display="block";
+    for (var i = 0; i < mailsRefuses.length; i++) {
+      if (this.value.includes(mailsRefuses[i])){
+        document.getElementById("error-mail").style.display = "block";
+        document.getElementById("input-formulaire").style.display="none";
+        return;
+      } else {
+        document.getElementById("error-mail").style.display = "none";
+        document.getElementById("input-formulaire").style.display="block";
+      }
+    
     }
   }
 
