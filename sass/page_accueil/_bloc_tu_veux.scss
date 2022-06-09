@@ -296,3 +296,92 @@ $primary-dark: mix(#000000, $primary, 25%);
         }
     }
 }
+
+// Animation developpeur/developpeuse
+
+// Attention !
+// Quand on change la taille de la police, il faut : 
+// Adapté la propriété "left" de .message
+// Dans le keyframe, adapter le top: -4.2em
+
+@media (max-width: 1500px) {
+  .developpeuse {
+    color: white;
+    margin-bottom: 32px;
+
+    font-weight: bold;
+    line-height: 1.5;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+
+
+    font-size: 35px;
+  
+  }
+  
+
+  
+  .message {
+  
+    color: white;
+    display: block;
+    font-weight: 900;
+    overflow: hidden;
+    position: absolute;
+    padding-left: 0.5rem;
+    top: 0.2rem;
+    left: 578px;
+    animation: openclose 15s ease-in-out infinite;
+  }
+  
+  
+  
+  @keyframes openclose {
+    0% {
+      top: 0.0rem;
+      width: 0;
+    }
+    5% {
+      width: 300;
+    }
+    22% {
+      width: 300px;
+    }
+    45% {
+      top: 0.0rem;
+      width: 300px;
+    }
+    50% {
+      top: 0.0rem;
+      width: 0;
+    }
+    52% {
+      top: -4.2rem;
+      width: 0;
+    }
+    57% {
+      top: -4.2rem;
+      
+    }
+    72% {
+      top: -4.2rem;
+      width: 300px;
+    }
+    92% {
+      top: -4.2rem;
+      width: 300px;
+    }
+    98% {
+      top: -4.2rem;
+      width: 0;
+      text-indent: 0;
+    }
+    100% {
+      top: 0;
+      width: 0;
+      text-indent: 0;
+    }
+  }
+  
+}

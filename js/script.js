@@ -345,6 +345,20 @@ document.addEventListener("DOMContentLoaded", function() {
     boutonGauche.style.display = "block"
   }
 
+  // Formulaire JS 
+
+  
+  document.getElementById("email").addEventListener('change', checkMail);
+  function checkMail() {
+    if (this.value.includes("@sfr") ||  this.value.includes("@yahoo")){
+      document.getElementById("error-mail").style.display = "block";
+      document.getElementById("input-formulaire").style.display="none";
+    } else {
+      document.getElementById("error-mail").style.display = "none";
+      document.getElementById("input-formulaire").style.display="block";
+    }
+  }
+
 
 
 });
