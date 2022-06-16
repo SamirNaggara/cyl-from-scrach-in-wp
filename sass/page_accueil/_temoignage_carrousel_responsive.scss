@@ -1,0 +1,66 @@
+@media screen and (max-width:1080px) {
+    .carrousel{
+        .carte1{
+            width: 38rem;
+            padding: 2em 1em !important;
+            .row{
+                .column-gauche{
+                    .gauche{
+                        .photo{
+                            img{
+                                width: 65%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:960px) {
+    .carrousel{
+        .carte1{
+            width: 35rem;
+            padding: 2em 1em !important;
+            .row{
+                .column-gauche{
+                    .gauche{
+                        .photo{
+                            img{
+                                width: 65%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:700px) {
+    .carrousel{
+        .carte1{
+            width: 22rem;
+            padding: 2em 1em !important;
+            .row{
+                .column-gauche{
+                    .gauche{
+                        .photo{
+                            img{
+                                width: 85%;
+                            }
+                        }
+                    }
+                }
+                .column-droite{
+                    .droite{
+                        .texte-temoignage{
+                            padding-right: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

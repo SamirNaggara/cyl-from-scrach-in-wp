@@ -1,0 +1,10 @@
+@media screen and (max-width:960px) {
+    .blocPourquoiCyl{
+        .conteneurBloc{
+            .container{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}
