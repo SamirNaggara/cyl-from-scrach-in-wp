@@ -14,10 +14,23 @@
 @use 'page_accueil/formations';
 @use 'page_accueil/contact';
 @use 'page_accueil/temoignage_carrousel';
+
+@use 'page_accueil/_bloc_tu_veux_responsive';
+@use 'page_accueil/_bloc1_responsive';
+@use 'page_accueil/_blocPourquoiCyl_responsive';
+@use 'page_accueil/_contact_responsive';
+@use 'page_accueil/_formations_responsive';
+@use 'page_accueil/_responsive_menu';
+@use 'page_accueil/_temoignage_carrousel_responsive';
+
+
+
+
 @use 'page-html/premiere_section';
 @use 'page-html/pourquoiHtml';
 @use 'page-html/description';
 @use 'page-html/programme';
+
 
 
 
