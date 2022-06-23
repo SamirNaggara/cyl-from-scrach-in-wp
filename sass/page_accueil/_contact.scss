@@ -81,6 +81,13 @@
                 }
             }
 
+            #error-mail {
+                margin-top: 10px;
+                color: red;
+                font-size: 15px;
+                display: none;
+            }
+
             textarea{
                 width: 100%;
                 min-height: 120px;
