@@ -11,7 +11,7 @@ $police-principal : 'Poppins';
 
 
 html{
-  scroll-snap-type: y mandatory;
+  // scroll-snap-type: y mandatory;
   transition:3s;
   font-family: $police-principal;
   scroll-behavior: smooth;
@@ -20,6 +20,14 @@ html{
     
   // }
   
+}
+
+h2{
+  text-align: center;
+  margin: 32px 0;
+  font-weight: bold;
+  font-size: 50px;
+  margin-bottom: 72px;
 }
 
 

@@ -17,6 +17,10 @@
   $bodyDest = "Bonjour, \n\n Nous avons bien reçu votre demande de contact pour CodeYourLife et nous vous en remercions. \n Notre équipe reviendra vers vous à l'adresse mail indiquée dans les plus brefs délais !\n\n Votre message : " . "\"". $message . "\"";
   $subjectDest = "CodeYourLife - Votre demande de contact";
 
+  if (!$_POST){
+    header( "refresh:7;url=./#formations");
+  }
+
   if($_POST) {
     // print '<pre>';
     //   print_r($_POST);
