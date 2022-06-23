@@ -1683,7 +1683,10 @@ section.bloc-cta-html .conteneurBloc .conteneur-boutons a {
 .premiereSectionHtml .conteneurTitre h1 {
   font-size: 60px;
   font-weight: bold;
+<<<<<<< HEAD
   text-align: center;
+=======
+>>>>>>> 7b93edfecf208e5dd23f89f3106b51d1bdb3f0bc
 }
 .premiereSectionHtml .conteneurTitre p {
   text-align: center;

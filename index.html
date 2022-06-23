@@ -21,10 +21,10 @@
                     <p>Code Your Life</p>
                 </a>
                 <nav class="menu">
-                    <a href="">Accueil</a>
-                    <a href="">Prestations</a>
-                    <a href="https://blog.codeyourlife.fr/">Blog</a>
-                    <a href="#contact">Contact</a>
+                    <a href="" class="dissapear">Accueil</a>
+                    <a href="" class="dissapear">Prestations</a>
+                    <a href="https://blog.codeyourlife.fr/" class="dissapear">Blog</a>
+                    <a href="#contact" class="dissapear">Contact</a>
                     <a href="#formations">Nos formations</a>
                 </nav>
             </div>
@@ -456,12 +456,13 @@
                         <div class="conteneurEmail">
                             <label for="E-mail">Votre email</label>
                             <input id="email" type="email" name="email" placeholder="mon-mail@gmail.fr"/>
+                            <p id="error-mail">Attention, les mails @sfr, @yahoo ne sont pas acceptés !</p>
                         </div> 
                         <div class="conteneurMessage">
                             <label for="message">Votre message</label>
                             <textarea row="30" col="50" placeholder="Écrivez-nous votre message ici" id="message" name="message"></textarea>
                         </div>
-                        <input type="submit" value="Envoyer" class="degrade">
+                        <input type="submit" value="Envoyer" class="degrade" id="input-formulaire">
                     </form>
                 </div>
             </section>
