@@ -1764,6 +1764,23 @@ section.bloc-cta-html .conteneurBloc .conteneur-boutons a {
     padding-left: 0px !important;
   }
 }
+@media screen and (max-width: 960px) {
+  .bloc-tu-veux {
+    flex-direction: column;
+  }
+  .bloc-tu-veux .conteneur {
+    width: 100%;
+  }
+  .bloc-tu-veux .conteneur-cta {
+    width: 100%;
+    margin-bottom: 80px;
+    padding-top: 0px;
+    align-items: center;
+  }
+  .bloc-tu-veux .conteneur-cta .accordion {
+    margin-top: 10px;
+  }
+}
 @media screen and (max-width: 700px) {
   .bloc-tu-veux .conteneur-cta {
     justify-content: flex-end;
@@ -1806,9 +1823,14 @@ section.bloc-cta-html .conteneurBloc .conteneur-boutons a {
     flex-direction: column;
   }
 }
+@media screen and (max-width: 960px) {
+  .conteneur {
+    align-items: center;
+  }
+}
 @media screen and (max-width: 700px) {
   .contact .conteneur form {
-    width: 42%;
+    width: 50%;
   }
 }
 @media screen and (max-width: 1080px) {
@@ -1817,6 +1839,12 @@ section.bloc-cta-html .conteneurBloc .conteneur-boutons a {
   }
 }
 @media screen and (max-width: 960px) {
+  .formations .conteneur {
+    flex-direction: column;
+  }
+  .formations .conteneur article .card {
+    margin: 10px 0;
+  }
   .formations .conteneur article .card .left-card {
     padding-bottom: 38px;
   }
@@ -1848,8 +1876,11 @@ section.bloc-cta-html .conteneurBloc .conteneur-boutons a {
     width: 100vw !important;
   }
 
-  .conteneurMenu {
-    display: none !important;
+  .conteneurMenu .conteneurLogo p {
+    padding: 23px 0;
+  }
+  .conteneurMenu .menu {
+    display: none;
   }
 
   .conteneurMenuResponsive {
@@ -1863,6 +1894,11 @@ section.bloc-cta-html .conteneurBloc .conteneur-boutons a {
   .sidebar {
     z-index: 9999;
     height: 102vh !important;
+  }
+  .sidebar .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   legend, label, input, ul, li {
