@@ -481,6 +481,7 @@ body section {
     position: relative;
     font-size: 35px;
   }
+
   .message {
     color: white;
     display: block;
@@ -492,6 +493,7 @@ body section {
     left: 578px;
     animation: openclose 15s ease-in-out infinite;
   }
+
   @keyframes openclose {
     0% {
       top: 0rem;
@@ -1762,10 +1764,28 @@ section.bloc-cta-html .conteneurBloc .conteneur-boutons a {
     padding-left: 0px !important;
   }
 }
+@media screen and (max-width: 960px) {
+  .bloc-tu-veux {
+    flex-direction: column;
+  }
+  .bloc-tu-veux .conteneur {
+    width: 100%;
+  }
+  .bloc-tu-veux .conteneur-cta {
+    width: 100%;
+    margin-bottom: 80px;
+    padding-top: 0px;
+    align-items: center;
+  }
+  .bloc-tu-veux .conteneur-cta .accordion {
+    margin-top: 10px;
+  }
+}
 @media screen and (max-width: 700px) {
   .bloc-tu-veux .conteneur-cta {
     justify-content: flex-end;
   }
+
   .bloc-cta-html .conteneurBloc .conteneurEffet .card-code {
     display: flex;
     justify-content: center;
@@ -1803,9 +1823,14 @@ section.bloc-cta-html .conteneurBloc .conteneur-boutons a {
     flex-direction: column;
   }
 }
+@media screen and (max-width: 960px) {
+  .conteneur {
+    align-items: center;
+  }
+}
 @media screen and (max-width: 700px) {
   .contact .conteneur form {
-    width: 42%;
+    width: 50%;
   }
 }
 @media screen and (max-width: 1080px) {
@@ -1814,6 +1839,12 @@ section.bloc-cta-html .conteneurBloc .conteneur-boutons a {
   }
 }
 @media screen and (max-width: 960px) {
+  .formations .conteneur {
+    flex-direction: column;
+  }
+  .formations .conteneur article .card {
+    margin: 10px 0;
+  }
   .formations .conteneur article .card .left-card {
     padding-bottom: 38px;
   }
@@ -1836,33 +1867,57 @@ section.bloc-cta-html .conteneurBloc .conteneur-boutons a {
 700px
 650px
 */
+.conteneurMenuResponsive {
+  display: none;
+}
+
 @media screen and (max-width: 960px) {
   html {
     width: 100vw !important;
   }
-  .conteneurMenu {
-    display: none !important;
+
+  .conteneurMenu .conteneurLogo p {
+    padding: 23px 0;
   }
+  .conteneurMenu .menu {
+    display: none;
+  }
+
+  .conteneurMenuResponsive {
+    display: block;
+  }
+
   .menu-toggler {
     z-index: 99999 !important;
   }
+
   .sidebar {
     z-index: 9999;
     height: 102vh !important;
   }
+  .sidebar .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   legend, label, input, ul, li {
     margin: 0;
     padding: 0;
   }
+
   ul, li {
     list-style: none;
   }
+
   a {
     text-decoration: none;
   }
+
   .input-toggler {
     display: none;
   }
+
   .menu-toggler {
     position: absolute;
     right: 0px;
@@ -1877,6 +1932,7 @@ section.bloc-cta-html .conteneurBloc .conteneur-boutons a {
     flex-direction: column;
     cursor: pointer;
   }
+
   .menu-toggler-line {
     width: 60%;
     height: 3px;
@@ -1885,37 +1941,45 @@ section.bloc-cta-html .conteneurBloc .conteneur-boutons a {
     position: relative;
     transition: all 0.4s ease-out;
   }
+
   .input-toggler:checked ~ .menu-toggler .menu-toggler-line {
     top: 5px;
     translateY: 100px;
     transform: rotate(45deg);
   }
+
   .input-toggler:checked ~ .menu-toggler .menu-toggler-line:nth-child(2) {
     display: none;
   }
+
   .input-toggler:checked ~ .menu-toggler .menu-toggler-line:nth-child(3) {
     top: -5px;
     translateY: 10;
     transform: rotate(135deg);
   }
+
   .nav {
     width: 100%;
     height: 100%;
     background: #973AED;
   }
+
   .nav ul {
     width: 100%;
   }
+
   .nav ul li {
     width: 100%;
     text-align: center;
   }
+
   .nav ul li a {
     display: inline-block;
     font-size: 36px;
     color: #fff;
     text-transform: uppercase;
   }
+
   .sidebar {
     position: absolute;
     top: 0;
@@ -1929,6 +1993,7 @@ section.bloc-cta-html .conteneurBloc .conteneur-boutons a {
     transform: translateX(-100%);
     transition: all 0.4s ease-out;
   }
+
   .menu-link {
     color: white;
     font-size: 10vmin;
@@ -1936,9 +2001,11 @@ section.bloc-cta-html .conteneurBloc .conteneur-boutons a {
     -webkit-transition: all 0.25s ease-out;
     transition: all 0.25s ease-out;
   }
+
   .menu-link:hover, .menu-link:focus, .menu-link:active {
     color: #d13f66;
   }
+
   .input-toggler:checked ~ .sidebar {
     transform: translateX(0%);
     opacity: 0.98;

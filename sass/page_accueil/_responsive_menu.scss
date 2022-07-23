@@ -6,6 +6,10 @@
 650px
 */
 
+.conteneurMenuResponsive{
+    display: none;
+}
+
 
 @media screen and (max-width:960px) {
 
@@ -14,7 +18,18 @@ html {
 }
 
 .conteneurMenu{
-    display: none !important;
+    .conteneurLogo{
+        p{
+            padding: 23px 0;
+        }
+    }
+    .menu{
+        display: none;
+    }
+}
+
+.conteneurMenuResponsive{
+    display: block;
 }
 
 .menu-toggler{
@@ -24,6 +39,11 @@ html {
 .sidebar{
     z-index: 9999;
     height: 102vh !important;
+    .menu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 

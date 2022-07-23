@@ -1,4 +1,3 @@
-
 @media screen and (max-width:1500px) {
 
     .bloc-tu-veux {
@@ -13,6 +12,24 @@
                     left: 0px !important;
                     padding-left: 0px !important;
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:960px){
+    .bloc-tu-veux{
+        flex-direction: column;
+        .conteneur{
+            width: 100%;
+        }
+        .conteneur-cta{
+            width: 100%;
+            margin-bottom: 80px;
+            padding-top: 0px;
+            align-items: center;
+            .accordion{
+                margin-top: 10px;
             }
         }
     }
