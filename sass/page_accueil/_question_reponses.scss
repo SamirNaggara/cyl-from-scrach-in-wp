@@ -17,6 +17,12 @@
         margin-bottom: 50px;
         padding: 16px 40px;
         text-transform: uppercase;
+
+        @media screen AND (max-width: 450px) {
+            width: 90%;
+            text-align: center;
+            line-height: 25px;
+        }
     
     }
 }

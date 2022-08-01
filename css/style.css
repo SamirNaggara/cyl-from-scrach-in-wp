@@ -996,7 +996,7 @@ section.bloc-cta-html .conteneurBloc h2 {
 }
 @media screen and (max-width: 450px) {
   section.bloc-cta-html .conteneurBloc h2 {
-    font-size: px;
+    font-size: 40px;
   }
 }
 section.bloc-cta-html .conteneurBloc p {
@@ -1031,6 +1031,12 @@ section.bloc-cta-html .conteneurBloc .conteneur-boutons a {
   display: flex;
   justify-content: space-around;
 }
+@media screen and (max-width: 450px) {
+  .bloc-cta-html code .cta, .bloc-cta-html .card-code .line-numbers .cta, .card-code .bloc-cta-html .line-numbers .cta {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .bloc-cta-html code .cta a, .bloc-cta-html .card-code .line-numbers .cta a, .card-code .bloc-cta-html .line-numbers .cta a {
   display: inline-block;
   width: 120px;
@@ -1063,9 +1069,14 @@ section.bloc-cta-html .conteneurBloc .conteneur-boutons a {
   perspective: 150rem;
   text-align: center;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 700px) {
   .card-code {
-    transform: none;
+    transform: scale(1.3);
+  }
+}
+@media screen and (max-width: 450px) {
+  .card-code {
+    transform: scale(1.2);
   }
 }
 @media screen and (max-width: 960px) {
@@ -1073,12 +1084,12 @@ section.bloc-cta-html .conteneurBloc .conteneur-boutons a {
     width: 400px;
   }
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 700px) {
   .card-code {
     width: 350px;
   }
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 450px) {
   .card-code {
     width: 250px;
   }
@@ -2450,6 +2461,13 @@ form .mauticform-innerform .mauticform-page-wrapper .mauticform-email {
   margin-bottom: 50px;
   padding: 16px 40px;
   text-transform: uppercase;
+}
+@media screen and (max-width: 450px) {
+  .question-reponses .cta {
+    width: 90%;
+    text-align: center;
+    line-height: 25px;
+  }
 }
 
 @media screen and (max-width: 960px) {

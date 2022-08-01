@@ -20,7 +20,7 @@ section.bloc-cta-html {
 			margin-bottom: 120px;
 
 			@media screen AND (max-width: 450px) {
-				font-size: px;
+				font-size: 40px;
 
 			}
 		}
@@ -92,6 +92,11 @@ $monospace: Consolas, "Lucida Console", monospace;
 		display: flex;
 		justify-content: space-around;
 
+		@media screen AND (max-width: 450px) {
+			flex-direction: column;
+			align-items: center;
+		}
+
 		a {
 			display: inline-block;
 			width: 120px;
@@ -126,8 +131,12 @@ $monospace: Consolas, "Lucida Console", monospace;
 
 .card-code {
 	transform: scale(1.5); // Grandit la carte !
-	@media screen AND (max-width: 960px){
-		transform: none;
+
+	@media screen AND (max-width: 700px){
+		transform: scale(1.3);
+	}
+	@media screen AND (max-width: 450px){
+		transform: scale(1.2);
 	}
 	margin-bottom: 120px;
 	margin: 10% auto;
@@ -138,10 +147,10 @@ $monospace: Consolas, "Lucida Console", monospace;
 		width: 400px;
 	}
 
-	@media screen AND (max-width: 960px){
+	@media screen AND (max-width: 700px){
 		width: 350px;
 	}
-	@media screen AND (max-width: 960px){
+	@media screen AND (max-width: 450px){
 		width: 250px;
 	}
 	height: 15rem;
