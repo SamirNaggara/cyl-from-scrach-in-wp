@@ -19,5 +19,8 @@
     "url": "https://github.com/SamirNaggara/cyl-from-scratch/issues"
   },
   "homepage": "https://github.com/SamirNaggara/cyl-from-scratch#readme",
-  "browserslist": "last 4 versions"
+  "browserslist": "last 4 versions",
+  "dependencies": {
+    "kute.js": "^2.2.4"
+  }
 }

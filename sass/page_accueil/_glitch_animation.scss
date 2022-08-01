@@ -9,6 +9,14 @@
     font-weight: bold;
     text-transform: uppercase;
     position: relative;
+
+    @media screen AND (max-width: 960px) {
+        font-size: 50px;
+    }
+
+    @media screen AND (max-width: 700px) {
+      font-size: 28px;
+    }
 }
 
 
@@ -20,12 +28,26 @@
     text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 black,
       0.025em 0.04em 0 #fffc00;
     animation: glitch 725ms infinite 3s;
+
+    @media screen AND (max-width: 960px) {
+      font-size: 50px;
+    }
+
+    @media screen AND (max-width: 700px) {
+      font-size: 28px;
+    }
   }
   
   .glitch span {
     position: absolute;
     top: 0;
     left: 0;
+
+    @media screen AND (max-width: 960px) {
+      left:auto;
+      display: inline-block;
+      margin: 0 auto;
+    }
   }
   
   .glitch span:first-child {

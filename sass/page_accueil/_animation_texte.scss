@@ -17,12 +17,15 @@
 
     z-index: 20;
 
-   
+    @media screen AND (max-width: 700px) {
+        flex-direction: column;
+    }
 }
 
 
 #first-load>span{
     font-size: 20px;
+    font-style: oblique;
 
 
     opacity: 0;
@@ -31,6 +34,10 @@
     animation-duration: 1.0s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
+
+    @media screen AND (max-width: 700px) {
+        line-height: 42px;
+    }
 }
 
 /*Pour que les mots n'apparaissent pas en même temps*/

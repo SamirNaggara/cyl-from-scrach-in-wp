@@ -6,6 +6,9 @@ $background: #edf7fa;
 
 
 .formations{
+  *{
+    box-sizing: content-box;
+  }
     h2{
     text-align: center;
     padding-top: 120px;
@@ -21,6 +24,19 @@ $background: #edf7fa;
         width: 90%;
         >article{
             width: 350px;
+            margin-bottom: 40px;
+
+            @media screen AND (max-width: 1500px) {
+                transform: scale(0.8);
+            }
+
+            @media screen AND (max-width: 1200px) {
+              transform: none;
+          }
+
+            @media screen AND (max-width:700px) {
+              width: 300px;
+            }
             
         }
 

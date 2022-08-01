@@ -4,14 +4,28 @@
 
 .bloc-tu-veux{
     display: flex;
+    @media screen AND (max-width: 1200px) {
+      flex-direction: column;
+    }
+
+    h2{
+      margin-bottom: 60px;
+    }
     .conteneur{
         width: 50%;
+        @media screen AND (max-width: 1200px) {
+          width: 100%;
+        }
         height: 100vh;
         padding: 0 32px;
+        @media screen AND (max-width: 700px){
+          padding: 0;
+        }
 
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
        
         font-family: base.$police-principal;
         font-size: 30px;
@@ -34,6 +48,11 @@
 
             color:white;
 
+            @media screen AND (max-width: 700px) {
+              font-size: 30px;
+              line-height: 50px;
+              }
+
            
 
           
@@ -48,16 +67,23 @@
 
     .conteneur-cta{
         width: 50%;
+        min-height: 100vh;
+        @media screen AND (max-width: 1200px) {
+          width: 100%;
+        }
         display: flex;
         justify-content: center;
         flex-direction: column;
-        padding-top: 96px;
 
 
         >p{
-          line-height: 23px;
+          line-height: 34px;
           font-size: 18px;
           padding: 0 46px;
+
+          @media screen AND (max-width:960px) {
+            width: 90%;
+          }
         }
     
 
@@ -78,6 +104,7 @@
             align-self: center;
             background-color: #e91e63;
 
+            margin-top: 50px;
             padding: 16px 40px;
             text-transform: uppercase;
 
@@ -100,12 +127,40 @@
 
     font-weight: bold;
     line-height: 1.5;
-    white-space: nowrap;
     overflow: hidden;
     position: relative;
 
 
-    font-size: 45px;
+    font-size: 40px;
+
+    @media screen AND (max-width: 1500px) {
+    font-size: 30px;
+    }
+
+    @media screen AND (max-width: 1200px) {
+      font-size: 40px;
+    }
+
+    @media screen AND (max-width: 700px) {
+      font-size: 25px;
+    }
+
+    @media screen AND (max-width: 450px) {
+      font-size: 19px;
+    }
+
+
+    >span{
+      padding-right: 113px;
+      @media screen AND (max-width: 700px) {
+        padding-right: 63px;
+
+        }
+    }
+
+    .message>div{
+      text-align: left;
+    }
   
   }
   
@@ -120,7 +175,7 @@
     position: absolute;
     padding-left: 0.5rem;
     top: 0.2rem;
-    left: 578px;
+    right: 0px;
     animation: openclose 15s ease-in-out infinite;
   }
   
@@ -132,37 +187,37 @@
       width: 0;
     }
     5% {
-      width: 300;
+      // width: 120px;
     }
     22% {
-      width: 300px;
+      width: 120px;
     }
     45% {
       top: 0.0rem;
-      width: 300px;
+      width: 120px;
     }
     50% {
       top: 0.0rem;
       width: 0;
     }
     52% {
-      top: -4.2rem;
+      top: -60px;
       width: 0;
     }
     57% {
-      top: -4.2rem;
+      top: -60px;
       
     }
     72% {
-      top: -4.2rem;
-      width: 300px;
+      top: -60px;
+      width: 120px;
     }
     92% {
-      top: -4.2rem;
-      width: 300px;
+      top: -60px;
+      width: 120px;
     }
     98% {
-      top: -4.2rem;
+      top: -60px;
       width: 0;
       text-indent: 0;
     }
@@ -192,7 +247,7 @@ $primary-dark: mix(#000000, $primary, 25%);
 
 .accordion {
     width: 100%;
-    max-width: 75rem;
+    max-width: 960px;
     margin: 0 auto;
     padding: 2rem;
     box-sizing: border-box;
@@ -304,76 +359,62 @@ $primary-dark: mix(#000000, $primary, 25%);
 // Adapté la propriété "left" de .message
 // Dans le keyframe, adapter le top: -4.2em
 
-@media (max-width: 1500px) {
-  .developpeuse {
-    color: white;
-    margin-bottom: 32px;
-
-    font-weight: bold;
-    line-height: 1.5;
-    white-space: nowrap;
-    overflow: hidden;
-    position: relative;
-
-
-    font-size: 35px;
-  
-  }
+// @media (max-width: 1500px) {
   
 
   
-  .message {
+//   .message {
   
-    color: white;
-    display: block;
-    font-weight: 900;
-    overflow: hidden;
-    position: absolute;
-    padding-left: 0.5rem;
-    top: 0.2rem;
-    left: 578px;
-    animation: openclose 15s ease-in-out infinite;
-  }
+//     color: white;
+//     display: block;
+//     font-weight: 900;
+//     overflow: hidden;
+//     position: absolute;
+//     padding-left: 0.5rem;
+//     top: 0.2rem;
+//     left: 578px;
+//     animation: openclose 15s ease-in-out infinite;
+//   }
   
   
-  
+@media screen AND (max-width: 1500px) {
   @keyframes openclose {
     0% {
       top: 0.0rem;
       width: 0;
     }
     5% {
-      width: 300;
+      // width: 120px;
     }
     22% {
-      width: 300px;
+      width: 120px;
     }
     45% {
       top: 0.0rem;
-      width: 300px;
+      width: 120px;
     }
     50% {
       top: 0.0rem;
       width: 0;
     }
     52% {
-      top: -4.2rem;
+      top: -45px;
       width: 0;
     }
     57% {
-      top: -4.2rem;
+      top: -45px;
       
     }
     72% {
-      top: -4.2rem;
-      width: 300px;
+      top: -45px;
+      width: 120px;
     }
     92% {
-      top: -4.2rem;
-      width: 300px;
+      top: -45px;
+      width: 120px;
     }
     98% {
-      top: -4.2rem;
+      top: -45px;
       width: 0;
       text-indent: 0;
     }
@@ -383,5 +424,156 @@ $primary-dark: mix(#000000, $primary, 25%);
       text-indent: 0;
     }
   }
-  
 }
+
+
+@media screen AND (max-width: 1200px) {
+  @keyframes openclose {
+    0% {
+      top: 0.0rem;
+      width: 0;
+    }
+    5% {
+      // width: 120px;
+    }
+    22% {
+      width: 120px;
+    }
+    45% {
+      top: 0.0rem;
+      width: 120px;
+    }
+    50% {
+      top: 0.0rem;
+      width: 0;
+    }
+    52% {
+      top: -60px;
+      width: 0;
+    }
+    57% {
+      top: -60px;
+      
+    }
+    72% {
+      top: -60px;
+      width: 120px;
+    }
+    92% {
+      top: -60px;
+      width: 120px;
+    }
+    98% {
+      top: -60px;
+      width: 0;
+      text-indent: 0;
+    }
+    100% {
+      top: 0;
+      width: 0;
+      text-indent: 0;
+    }
+  }
+}
+
+
+@media screen AND (max-width: 700px) {
+  @keyframes openclose {
+    0% {
+      top: 0.0rem;
+      width: 0;
+    }
+    5% {
+      // width: 120px;
+    }
+    22% {
+      width: 70px;
+    }
+    45% {
+      top: 0.0rem;
+      width: 70px;
+    }
+    50% {
+      top: 0.0rem;
+      width: 0;
+    }
+    52% {
+      top: -37px;
+      width: 0;
+    }
+    57% {
+      top: -37px;
+      
+    }
+    72% {
+      top: -37px;
+      width: 70px;
+    }
+    92% {
+      top: -37px;
+      width: 70px;
+    }
+    98% {
+      top: -37px;
+      width: 0;
+      text-indent: 0;
+    }
+    100% {
+      top: 0;
+      width: 0;
+      text-indent: 0;
+    }
+  }
+}
+
+
+@media screen AND (max-width: 450px) {
+  @keyframes openclose {
+    0% {
+      top: 0.0rem;
+      width: 0;
+    }
+    5% {
+      // width: 120px;
+    }
+    22% {
+      width: 70px;
+    }
+    45% {
+      top: 0.0rem;
+      width: 70px;
+    }
+    50% {
+      top: 0.0rem;
+      width: 0;
+    }
+    52% {
+      top: -60px;
+      width: 0;
+    }
+    57% {
+      top: -29px;
+      
+    }
+    72% {
+      top: -29px;
+      width: 70px;
+    }
+    92% {
+      top: -29px;
+      width: 70px;
+    }
+    98% {
+      top: -29px;
+      width: 0;
+      text-indent: 0;
+    }
+    100% {
+      top: 0;
+      width: 0;
+      text-indent: 0;
+    }
+  }
+}
+
+

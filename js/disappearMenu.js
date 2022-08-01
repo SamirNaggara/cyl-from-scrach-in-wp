@@ -18,7 +18,6 @@ var menu = document.querySelector('.conteneurMenu');
 
 window.onscroll = function(e) {
   // print "false" if direction is down and "true" if up
-  console.log(this.oldScroll > this.scrollY);
   if (this.oldScroll > this.scrollY){
     menu.style.opacity = 1
   } else {

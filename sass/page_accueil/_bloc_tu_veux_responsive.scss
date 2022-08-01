@@ -1,27 +1,27 @@
 @media screen and (max-width:1500px) {
 
-    .bloc-tu-veux {
-        .conteneur{
-            .developpeuse{
-                span{
-                    float: left !important;
-                }
-                .message{
-                    float: left;
-                    position: relative;
-                    left: 0px !important;
-                    padding-left: 0px !important;
-                }
-            }
-        }
-    }
+    // .bloc-tu-veux {
+    //     .conteneur{
+    //         .developpeuse{
+    //             span{
+    //                 float: left !important;
+    //             }
+    //             .message{
+    //                 float: left;
+    //                 position: relative;
+    //                 left: 0px !important;
+    //                 padding-left: 0px !important;
+    //             }
+    //         }
+    //     }
+    // }
 }
 
 @media screen and (max-width:960px){
     .bloc-tu-veux{
         flex-direction: column;
         .conteneur{
-            width: 100%;
+            width: auto;
         }
         .conteneur-cta{
             width: 100%;

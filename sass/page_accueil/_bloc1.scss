@@ -3,6 +3,10 @@
 .hero{
     // background-color: base.$primary-color;
     position: relative;
+
+    @media screen and (max-width: 960px) {
+        padding-top: 80px;
+    }
     
 
     .conteneurHero{
@@ -13,10 +17,12 @@
         margin: 0 auto;
         justify-content: space-between;
         flex-direction: row-reverse;
+        position: relative;
+        overflow: hidden;
 
         .logo{
             width: 30%;
-            background-image: url("../images/POULPY-INTRO.png");
+            // background-image: url("../images/POULPY-INTRO.png");
             background-repeat: no-repeat;
             background-size: 370px;
             background-position: left 85%;
@@ -36,18 +42,28 @@
     
             padding: 0 80px;
 
+            @media screen AND (max-width: 700px) {
+                    padding: 0;
+            }
+
             .logo{
                 width: 370px;
                 height: 300px;
                 position: absolute;
                 bottom: 50px;
                 right: 100px;
+
+                
        
             }
 
             .conteneur-titre{
                 width: 100%;
                 color: white;
+
+                @media screen AND (max-width: 960px) {
+                    text-align: center;
+                }
             }
             >*{
                 animation: apparait;
@@ -61,6 +77,18 @@
 
             .les-premiers-pas{
                 line-height: 80px;
+
+                @media screen AND (max-width: 960px) {
+                    line-height: 65px;
+                    
+                }
+            }
+
+            .glitch{
+                @media screen AND (max-width: 960px) {
+                    line-height: 65px;
+                    
+                }
             }
 
          
@@ -88,6 +116,17 @@
                
 
                 color: white;
+
+                @media screen AND (max-width: 960px) {
+                    text-align: center;
+                    width: auto;
+                }
+
+                @media screen AND (max-width: 700px) {
+                    padding-bottom: 40px;
+                    padding-left: 4px;
+                    padding-right: 4px;
+                }
                
                 
                 
@@ -96,8 +135,10 @@
             }
 
             .conteneur-cta{
-
-            
+                text-align: center;
+                @media screen AND (max-width: 960px) {
+                    margin: 0 auto;
+                }
     
                 a.cta{
                     text-decoration: none;
@@ -110,6 +151,10 @@
                     background-color: white;
                     color: purple;
                     border: 2px solid white;
+
+                    @media screen AND (max-width: 960px) {
+                        margin-bottom: 8px;
+                    }
                 }
 
                 a.cta:last-child{
@@ -151,6 +196,37 @@
 
 .custom-shape-divider-bottom-1651429820 .shape-fill {
     fill: white;
+    
+}
+
+
+// Poulpy
+
+.conteneur-logo-hero{
+    position: absolute;
+    bottom: -561px;
+    right: -810px;
+
+    @media screen AND (max-width: 1200px) {
+        bottom: -576px;
+        right: -965px;
+    }
+
+    @media screen AND (max-width: 960px) {
+        display: none;
+    }
+}
+
+.conteneur-logo-hero img{
+    position: absolute;
+    top: 329px;
+    left: 630px;
+
+    @media screen AND (max-width: 1200px) {
+        top: 390px;
+        left: 555px;
+        width: 275px;
+    }
     
 }
 

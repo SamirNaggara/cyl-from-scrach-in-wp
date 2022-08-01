@@ -8,6 +8,9 @@ $police-principal : 'Poppins';
   font-display: swap;
 }
 
+*{
+  box-sizing: border-box;
+}
 
 
 html{
@@ -24,10 +27,10 @@ html{
 
 h2{
   text-align: center;
-  margin: 32px 0;
+  // margin: 32px 0;
   font-weight: bold;
   font-size: 50px;
-  margin-bottom: 72px;
+  // margin-bottom: 72px;
 }
 
 
