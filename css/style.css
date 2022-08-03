@@ -1209,6 +1209,11 @@ section.bloc-cta-html .conteneurBloc .conteneur-boutons a {
   animation-timing-function: cubic-bezier(0.5, 1.75, 0.75, 1.25);
 }
 
+@media screen and (max-width: 450px) {
+  .card-code-back .indent:nth-child(4) {
+    margin-bottom: 85px;
+  }
+}
 @keyframes codeMove {
   0% {
     transform: rotateX(0);

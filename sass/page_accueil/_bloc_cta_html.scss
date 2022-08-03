@@ -253,6 +253,7 @@ $monospace: Consolas, "Lucida Console", monospace;
 
 	code {
 		color: $white;
+
 	}
 
 	.indent {
@@ -302,6 +303,11 @@ $monospace: Consolas, "Lucida Console", monospace;
 
 }
 
+@media screen AND (max-width: 450px) {
+	.card-code-back .indent:nth-child(4){
+		margin-bottom: 85px; 
+	}
+}
 
 @keyframes codeMove {
 	0% {
