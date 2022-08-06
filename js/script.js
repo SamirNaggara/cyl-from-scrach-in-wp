@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   // function([string1, string2],target id,[color1,color2])    
-  consoleText(['mais tu ne sais pas quelle formation choisir ?', 'mais tu n\'es pas sur que tu vas aimer ?', 'mais tu as peur de te lancer ?'], 'text', ['pink', 'rebeccapurple', 'lightblue']);
+  consoleText(['mais tu ne sais pas quelle formation choisir ?', 'mais tu n\'es pas sûr(e) que tu vas aimer ?', 'mais tu as peur de te lancer ?'], 'text', ['pink', 'rebeccapurple', 'lightblue']);
 
   function consoleText(words, id, colors) {
     if (colors === undefined) colors = ['#fff'];
