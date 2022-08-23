@@ -1,9 +1,9 @@
 <?php
 
   // La personne qui a envoyé la demande de contact
-  $dest = htmlentities(htmlentities($_POST['email']));
+  $dest = htmlentities(addslashes($_POST['email']));
   // Le message de cette personne
-  $message = htmlentities(htmlentities($_POST['message']));
+  $message = htmlentities(addslashes($_POST['message']));
 
   // Notre mail contact@codeyourlife.fr
   $contact = "contact@codeyourlife.fr";
@@ -30,7 +30,7 @@
     // echo $message . " = message";
 
     $check1 = mail($contact, $subjectContact, $bodyContact, $headersContact);
-    $check2 = mail($dest, $subjectDest, $bodyDest,$headersContact);
+    $check2 = mail($contact, $subjectDest, $bodyDest,$headersContact);
     $br = '<br>';
 
     if($check1) {
