@@ -1,5 +1,3 @@
-
-
 @use 'page_accueil/base';
 @use 'page_accueil/keyframe';
 @use 'page_accueil/navigation';
@@ -23,6 +21,7 @@
 @use 'page_accueil/_formations_responsive';
 @use 'page_accueil/_responsive_menu';
 @use 'page_accueil/_temoignage_carrousel_responsive';
+@use 'page_accueil/_footer';
 
 
 
@@ -31,8 +30,3 @@
 @use 'page-html/pourquoiHtml';
 @use 'page-html/description';
 @use 'page-html/programme';
-
-
-
-
-

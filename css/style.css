@@ -2709,6 +2709,50 @@ form .mauticform-innerform .mauticform-page-wrapper .mauticform-email {
     padding-right: 18px;
   }
 }
+.general-footer {
+  color: black;
+  display: flex;
+  justify-content: center;
+  margin: 25px;
+}
+@media screen and (max-width: 960px) {
+  .general-footer {
+    display: flex;
+  }
+}
+@media screen and (max-width: 700px) {
+  .general-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    margin-top: 3%;
+  }
+}
+.general-footer .link-footer a {
+  margin-right: 30px;
+  margin-left: 30px;
+  color: black;
+  text-decoration: none;
+}
+@media screen and (max-width: 700px) {
+  .general-footer .link-footer a {
+    margin: 5px;
+  }
+}
+@media screen and (max-width: 960px) {
+  .general-footer .link-footer a {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.copywrite {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
 .premiereSectionHtml {
   display: flex;
   justify-content: center;
