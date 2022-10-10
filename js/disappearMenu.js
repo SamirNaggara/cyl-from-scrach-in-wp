@@ -20,8 +20,11 @@ window.onscroll = function(e) {
   // print "false" if direction is down and "true" if up
   if (this.oldScroll > this.scrollY){
     menu.style.opacity = 1
+    menu.style.pointerEvents = "auto";
   } else {
     menu.style.opacity = 0
+    menu.style.pointerEvents = "none";
+
   }
   this.oldScroll = this.scrollY;
 }
