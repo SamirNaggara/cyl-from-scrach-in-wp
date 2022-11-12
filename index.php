@@ -1,3 +1,7 @@
+<?php 
+define("URL_ASSETS", "https://coucou.codeyourlife.fr/");
+define("URL", "https://blog.codeyourlife.fr/");
+?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -10,9 +14,9 @@
         <meta name="author" content="Code Your Life" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Code Your Life</title>
-        <link rel="icon" href="images/POULPY-SOLO.png" sizes="8x16" />
-        <link href="css/reset.css" rel="stylesheet" />
-        <link href="css/style.css" rel="stylesheet" />
+        <link rel="icon" href="<?=URL_ASSETS?>images/POULPY-SOLO.png" sizes="8x16" />
+        <link href="<?=URL_ASSETS?>css/reset.css" rel="stylesheet" />
+        <link href="<?=URL_ASSETS?>css/style.css" rel="stylesheet" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -26,7 +30,7 @@
             <div>
                 <a
                     class="conteneurLogo"
-                    href="file:///C:/wamp64/www/codeyourlife/index.html"
+                    href="<?=URL?>"
                 >
                     <p>Code Your Life</p>
                 </a>
@@ -135,7 +139,7 @@
                                 </g>
                             </svg>
                             <img
-                                src="images/POULPY-SOLO.png"
+                                src="<?=URL_ASSETS?>images/POULPY-SOLO.png"
                                 alt="Code Your Life Logo"
                             />
                         </div>
@@ -525,7 +529,7 @@
                             </div>
                             <div class="triangle">
                                 <div class="circle-button" id="circleDrop">
-                                    <img class="close" src="images/close.svg" />
+                                    <img class="close" src="<?=URL_ASSETS?>images/close.svg" />
                                 </div>
                             </div>
                             <div class="card-middle">
@@ -557,7 +561,7 @@
                             </div>
                             <div class="triangle">
                                 <div class="circle-button" id="circleDrop">
-                                    <img class="close" src="images/close.svg" />
+                                    <img class="close" src="<?=URL_ASSETS?>images/close.svg" />
                                 </div>
                             </div>
                             <div class="card-middle">
@@ -594,7 +598,7 @@
                             </div>
                             <div class="triangle">
                                 <div class="circle-button" id="circleDrop">
-                                    <img class="close" src="images/close.svg" />
+                                    <img class="close" src="<?=URL_ASSETS?>images/close.svg" />
                                 </div>
                             </div>
                             <div class="card-middle">
@@ -621,10 +625,10 @@
             <section class="carrousel" id="carrousel">
                 <div class="conteneur-fleches">
                     <button class="slide-gauche" id="bouton-gauche">
-                        <img src="./images/left-arrow.png" alt="" />
+                        <img src="<?=URL_ASSETS?>images/left-arrow.png" alt="" />
                     </button>
                     <button class="slide-droite" id="bouton-droit">
-                        <img src="./images/right-arrow.png" alt="" />
+                        <img src="<?=URL_ASSETS?>images/right-arrow.png" alt="" />
                     </button>
                 </div>
                 <div
@@ -637,7 +641,7 @@
                                 <div class="gauche">
                                     <div class="photo">
                                         <img
-                                            src="./images/avatar2.svg"
+                                            src="<?=URL_ASSETS?>images/avatar2.svg"
                                             alt="photo témoignage Sophie"
                                         />
                                     </div>
@@ -678,7 +682,7 @@
                                 <div class="gauche">
                                     <div class="photo">
                                         <img
-                                            src="./images/avatar1.svg"
+                                            src="<?=URL_ASSETS?>images/avatar1.svg"
                                             alt="photo témoignage Sophie"
                                         />
                                     </div>
@@ -717,7 +721,7 @@
                                 <div class="gauche">
                                     <div class="photo">
                                         <img
-                                            src="./images/avatar3.svg"
+                                            src="<?=URL_ASSETS?>images/avatar3.svg"
                                             alt="photo témoignage Sophie"
                                         />
                                     </div>
@@ -870,8 +874,8 @@
             </div>
         </div> -->
 
-        <script src="js/script.js" defer></script>
-        <script src="js/disappearMenu.js" defer></script>
+        <script src="<?=URL_ASSETS?>js/script.js" defer></script>
+        <script src="<?=URL_ASSETS?>js/disappearMenu.js" defer></script>
         <script src="https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js"></script>
         <script>
             console.log(KUTE);
